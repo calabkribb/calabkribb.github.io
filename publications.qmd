@@ -1,18 +1,28 @@
 ---
-title: "Publications"
+title: "논문"
+subtitle: "Publications"
 ---
+
+<!-- 내용은 data/publications.csv에서 자동 생성.
+     key=TRUE → 대표 논문 탭, topics(;로 구분) → 주제 탭. 주제 목록은 R/site.R의 PUB_TOPICS. -->
 
 ```{r}
 #| echo: false
 #| results: asis
-pubs <- read.csv("data/publications.csv", stringsAsFactors = FALSE)
-pubs <- pubs[order(-pubs$year), ]
-for (y in unique(pubs$year)) {
-  cat("\n## ", y, "\n\n", sep = "")
-  sub <- pubs[pubs$year == y, ]
-  for (i in seq_len(nrow(sub))) {
-    cat("- ", sub$authors[i], ". **", sub$title[i], "**. *",
-        sub$journal[i], "* (", sub$year[i], ").\n", sep = "")
+source("R/site.R")
+orcid <- read_team()$pi$orcid
+lang_tabs(
+  ko = function() {
+    cat("\\* 공동 제1저자, \\# 공동 교신저자.")
+    if (nzchar(orcid)) cat(" 전체 목록은 [ORCID](https://orcid.org/", orcid, ")에서도 볼 수 있습니다.", sep = "")
+    cat("\n")
+    show_pubs("ko")
+  },
+  en = function() {
+    cat("\\* co-first author, \\# co-corresponding author.")
+    if (nzchar(orcid)) cat(" The full record is also available on [ORCID](https://orcid.org/", orcid, ").", sep = "")
+    cat("\n")
+    show_pubs("en")
   }
-}
+)
 ```

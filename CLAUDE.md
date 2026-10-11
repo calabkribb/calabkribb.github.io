@@ -25,13 +25,28 @@
   - knitr 1.52, rmarkdown 2.32, usethis 3.2.2, gitcreds 0.1.2
   - 위 환경에서 `quarto render` 성공(10개 파일), docs/에 index.html·.nojekyll 생성 확인.
     사이드바 배경 이미지는 Quarto가 docs/site_libs/bootstrap/assets/로 복사함(경로 정상).
+  - 2026-10-11 호스팅 테스트 성공: main 브랜치 `/docs` 배포, https://calabkribb.github.io/ 정상 표시.
 
 ## 파일 구조
-- `_quarto.yml` 사이트 설정(메뉴·사이드바), `styles.scss` 스타일
-- `index.qmd`, `team.qmd`, `publications.qmd`(R chunk로 `data/publications.csv` 읽음),
-  `tools.qmd`, `media.qmd`, `gallery.qmd`, `research/`(listing + topic*.qmd)
-- `assets/` 로고·사이드바 배경, `photos/` 갤러리 이미지
+- `_quarto.yml` 사이트 설정(메뉴·사이드바, `site-url`, 최종 수정일), `styles.scss` 스타일
+- 메뉴: 홈(`index.qmd`), 연구(`research/index.qmd` + `topic*.qmd`), 구성원(`team.qmd`),
+  논문(`publications.qmd`), 소식(`news.qmd`), 합류(`join.qmd`)
+- 데이터 → 페이지 자동 생성 (페이지가 아니라 데이터 파일을 수정할 것):
+  - `data/team.yml` → team.qmd (PI 프로필·경력·수상·위원회, 구성원, 졸업생)
+  - `data/publications.csv` → publications.qmd (`key=TRUE`→대표 논문 탭, `topics`(;구분)→주제 탭,
+    주제 목록·순서는 `R/site.R`의 `PUB_TOPICS`, 굵게 표시할 PI 이름은 `PI_NAME`)
+  - `data/news.csv` → news.qmd 전체, index.qmd 최근 3건
+- `R/site.R` 페이지 공통 R 함수 (`lang_tabs()`, `show_pubs()`, `show_news()`, `show_pi()` 등)
+- `_hold/` 보류 페이지(tools, media, gallery). `_`로 시작해 render 안 됨. 콘텐츠가 생기면 루트로 옮기고 메뉴에 추가
+- `assets/` 로고·사이드바 배경, `photos/` 갤러리 이미지(현재 미사용)
 - `docs/` = render 산출물
+
+## 한/영 구성
+- 기본 언어는 한국어(`lang: ko`). 모든 페이지 본문은 `::: {.panel-tabset group="lang"}` 안에
+  `## 한국어` / `## English` 두 탭으로 작성. 탭 안 소제목은 `###` 이하만 쓸 것(`##`는 탭이 됨).
+- `group="lang"`이라 한 탭 선택이 사이트 전체에 적용되고 브라우저에 기억됨 (Quarto 1.10.19에서 확인).
+- R로 생성하는 페이지는 `lang_tabs(ko = function() ..., en = function() ...)` 사용.
+- 페이지 제목은 `title`(한국어) + `subtitle`(English), 메뉴는 "한국어 · English" 형식.
 
 ## 반드시 지킬 규칙
 1. `docs/`는 직접 수정하지 말 것. 전체 render 때마다 통째로 재생성되어 수동 추가 파일은 삭제됨.

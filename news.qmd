@@ -1,0 +1,16 @@
+---
+title: "소식"
+subtitle: "News"
+---
+
+<!-- 내용은 data/news.csv에서 자동 생성. 새 소식은 csv에 한 줄 추가 후 render. -->
+
+```{r}
+#| echo: false
+#| results: asis
+source("R/site.R")
+lang_tabs(
+  ko = function() show_news("ko"),
+  en = function() show_news("en")
+)
+```

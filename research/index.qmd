@@ -1,11 +1,80 @@
 ---
-title: "Our research interests"
-listing:
-  contents: "topic*.qmd"
-  type: grid
-  grid-columns: 2
-  sort: "title"
-  fields: [image, title, description]
+title: "연구"
+subtitle: "Research"
 ---
 
-Short paragraph introducing the lab's research program (placeholder).
+::: {.panel-tabset group="lang"}
+
+## 한국어
+
+우리 연구실의 연구 프로그램을 소개하는 문단 (작성 예정).
+
+### 연구 주제
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+[![](topic1.jpg)](topic1.qmd)
+
+**[연구 주제 1](topic1.qmd)** \
+주제 1을 한두 줄로 요약.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[![](topic2.jpg)](topic2.qmd)
+
+**[연구 주제 2](topic2.qmd)** \
+주제 2를 한두 줄로 요약.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[![](topic3.jpg)](topic3.qmd)
+
+**[연구 주제 3](topic3.qmd)** \
+주제 3을 한두 줄로 요약.
+:::
+
+:::
+
+### 공동연구
+
+- 협력 기관 A — 협력 연구자, 공동연구 주제 (placeholder)
+- 협력 기관 B — 협력 연구자, 공동연구 주제 (placeholder)
+
+## English
+
+A paragraph introducing the lab's research program (to be written).
+
+### Research topics
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+[![](topic1.jpg)](topic1.qmd)
+
+**[Research topic 1](topic1.qmd)** \
+One- or two-line summary of topic 1.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[![](topic2.jpg)](topic2.qmd)
+
+**[Research topic 2](topic2.qmd)** \
+One- or two-line summary of topic 2.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+[![](topic3.jpg)](topic3.qmd)
+
+**[Research topic 3](topic3.qmd)** \
+One- or two-line summary of topic 3.
+:::
+
+:::
+
+### Collaborations
+
+- Institution A — collaborator, joint project (placeholder)
+- Institution B — collaborator, joint project (placeholder)
+
+:::

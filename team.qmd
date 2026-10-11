@@ -1,28 +1,30 @@
 ---
-title: "Team"
+title: "구성원"
+subtitle: "Team"
 ---
 
-::: {.grid}
+<!-- 내용은 data/team.yml에서 자동 생성. 이 파일이 아니라 team.yml을 수정할 것. -->
 
-::: {.g-col-12 .g-col-md-4}
-![](assets/logo.png){width=120px}
-
-**Member A** \
-Principal Investigator
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![](assets/logo.png){width=120px}
-
-**Member B** \
-PhD student
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![](assets/logo.png){width=120px}
-
-**Member C** \
-Researcher
-:::
-
-:::
+```{r}
+#| echo: false
+#| results: asis
+source("R/site.R")
+lang_tabs(
+  ko = function() {
+    cat("\n### 연구책임자\n")
+    show_pi("ko")
+    cat("\n### 구성원\n\n")
+    show_members("ko", "current")
+    cat("\n### 졸업생\n\n")
+    show_members("ko", "alumni")
+  },
+  en = function() {
+    cat("\n### Principal Investigator\n")
+    show_pi("en")
+    cat("\n### Members\n\n")
+    show_members("en", "current")
+    cat("\n### Alumni\n\n")
+    show_members("en", "alumni")
+  }
+)
+```
