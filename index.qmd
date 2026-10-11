@@ -1,6 +1,7 @@
 ---
-title: "Cellular Aging Laboratory"
-subtitle: "세포노화 연구실 · KRIBB"
+pagetitle: "Cellular Agenomics Lab | KRIBB"
+page-layout: full
+title-block-style: none   # 홈에는 제목·최종 수정일 영역을 표시하지 않음
 ---
 
 ```{r}
@@ -8,75 +9,38 @@ subtitle: "세포노화 연구실 · KRIBB"
 source("R/site.R")
 ```
 
-::: {.panel-tabset group="lang"}
+::: {.hero}
+# Cellular Agenomics Lab
 
-## 한국어
+We study how cellular senescence and aging microenvironments drive tissue decline
+and age-related disease, using single-cell and spatial multi-omics. (draft)
 
-::: {.callout-note}
-현재 사이트의 모든 내용은 예시(placeholder)입니다.
+[Our research](research.qmd){.btn .btn-light}
 :::
 
-### 연구실 소개
+::: {.grid}
 
-우리 연구실은 **세포노화**와 **노화 미세환경**이 조직 기능 저하와 노화 관련 질환으로
-이어지는 과정을 단일세포·공간 멀티오믹스로 연구합니다.
-(연구실이 답하려는 큰 질문을 3~4문장으로 작성 예정)
+::: {.g-col-12 .g-col-md-7}
+## About the lab
 
-### 연구 주제
+(3–4 sentences on the big questions the lab is asking — to be written.)
 
-- [연구 주제 1](research/topic1.qmd) — 한 줄 요약
-- [연구 주제 2](research/topic2.qmd) — 한 줄 요약
-- [연구 주제 3](research/topic3.qmd) — 한 줄 요약
+Established in 2020, the lab is part of the Aging Convergence Research Center at the
+Korea Research Institute of Bioscience and Biotechnology (KRIBB), Daejeon, Korea.
 
-### 최근 소식
+[We are recruiting →](join.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-5}
+## Latest news
 
 ```{r}
 #| echo: false
 #| results: asis
-show_news("ko", 3)
-```
-
-[전체 소식 →](news.qmd)
-
-### 연락처
-
-- 이메일: [pi-email@example.com](mailto:pi-email@example.com)
-- 주소: 한국생명공학연구원(KRIBB), 대전광역시 유성구 과학로 125
-- 함께 연구할 분을 찾고 있습니다 → [합류 안내](join.qmd)
-
-## English
-
-::: {.callout-note}
-All content on this site is currently placeholder.
-:::
-
-### About the lab
-
-We study how **cellular senescence** and **aging microenvironments** drive tissue
-decline and age-related disease, using single-cell and spatial multi-omics.
-(3–4 sentences on the big questions the lab is asking — to be written)
-
-### Research
-
-- [Research topic 1](research/topic1.qmd) — one-line summary
-- [Research topic 2](research/topic2.qmd) — one-line summary
-- [Research topic 3](research/topic3.qmd) — one-line summary
-
-### Latest news
-
-```{r}
-#| echo: false
-#| results: asis
-show_news("en", 3)
+show_news(3)
 ```
 
 [All news →](news.qmd)
-
-### Contact
-
-- Email: [pi-email@example.com](mailto:pi-email@example.com)
-- Address: Korea Research Institute of Bioscience and Biotechnology (KRIBB),
-  125 Gwahak-ro, Yuseong-gu, Daejeon, Republic of Korea
-- We are recruiting → [Join us](join.qmd)
+:::
 
 :::

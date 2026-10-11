@@ -1,0 +1,13 @@
+---
+title: "Research"
+description: "How do cells and their tissue environments age? (draft one-line overview)"
+---
+
+<!-- 내용은 data/projects.yml에서 자동 생성. 모식도는 assets/projects/에 넣고 projects.yml의 image에 경로를 적을 것 -->
+
+```{r}
+#| echo: false
+#| results: asis
+source("R/site.R")
+show_projects()
+```

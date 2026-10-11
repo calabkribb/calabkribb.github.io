@@ -1,0 +1,44 @@
+---
+title: "Chuna Kim, Ph.D."
+subtitle: "Principal Investigator"
+image: ../assets/team/chuna-kim.jpg
+order: 1
+about:
+  template: trestles
+  image-shape: rectangle
+  image-width: 14em
+  links:
+    - icon: envelope
+      text: kimchuna@kribb.re.kr
+      href: "mailto:kimchuna@kribb.re.kr"
+---
+
+**Research interests** — Aging niches and cellular senescence in tissues, studied with
+single-cell and spatial multi-omics; aging-associated diseases. (draft)
+
+## Employment
+
+- 2025–present &nbsp; Principal Researcher, Aging Convergence Research Center,
+  Korea Research Institute of Bioscience and Biotechnology (KRIBB)
+- 2021–present &nbsp; Associate Professor, Department of Bioinformatics,
+  University of Science and Technology (UST)
+- 2019–2025 &nbsp; Senior Researcher, Aging Convergence Research Center, KRIBB
+
+## Education & Training
+
+- 2016–2019 &nbsp; Postdoctoral Fellow, Department of Biological Science, Seoul National University
+- 2009–2016 &nbsp; Ph.D. in Biological Science, Seoul National University
+- 2005–2009 &nbsp; B.S. in Biological Science, Seoul National University
+
+## Awards
+
+- 2026 &nbsp; 과학의날 기념 부총리표창 (과학기술진흥유공)
+- 2026 &nbsp; 한국생명공학연구원 우수논문상
+- 2025 &nbsp; 한국노화학회 올해의 논문상
+- 2023 &nbsp; 과학기술연합대학원대학교(UST) 우수강의상
+- 2022 &nbsp; Outstanding Young Researcher Award, 국가과학기술연구회(NST)
+- 2015 &nbsp; Top 5 Basic Science Achievement, BRIC
+
+## Outreach
+
+Public lectures and writings on aging science → [Outreach](../outreach.qmd)

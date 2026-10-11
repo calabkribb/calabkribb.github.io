@@ -1,30 +1,36 @@
 ---
-title: "구성원"
-subtitle: "Team"
+title: "Team"
+listing:
+  - id: members
+    contents: "team/*.qmd"
+    type: grid
+    grid-columns: 4
+    fields: [image, title, subtitle]
+    sort: "order"
+    image-placeholder: assets/team/placeholder.png
+    sort-ui: false
+    filter-ui: false
 ---
 
-<!-- 내용은 data/team.yml에서 자동 생성. 이 파일이 아니라 team.yml을 수정할 것. -->
+<!-- 구성원 = team/ 폴더의 qmd 파일 하나씩. order 값 순서로 표시.
+     공동연구자 = data/collaborators.csv -->
+
+::: {.panel-tabset}
+
+## Members
+
+::: {#members}
+:::
+
+## Collaborators
+
+We work closely with these labs.
 
 ```{r}
 #| echo: false
 #| results: asis
 source("R/site.R")
-lang_tabs(
-  ko = function() {
-    cat("\n### 연구책임자\n")
-    show_pi("ko")
-    cat("\n### 구성원\n\n")
-    show_members("ko", "current")
-    cat("\n### 졸업생\n\n")
-    show_members("ko", "alumni")
-  },
-  en = function() {
-    cat("\n### Principal Investigator\n")
-    show_pi("en")
-    cat("\n### Members\n\n")
-    show_members("en", "current")
-    cat("\n### Alumni\n\n")
-    show_members("en", "alumni")
-  }
-)
+show_collaborators()
 ```
+
+:::

@@ -1,0 +1,68 @@
+# Models & Tools 페이지 데이터. 위에서부터 순서대로 표시됨.
+# image: 대표 분석 이미지 (assets/methods/). 현재는 R로 만든 예시 이미지(모의 데이터) → 실제 이미지로 교체
+# items: 기법 목록. 하위 항목이 있으면 {name: ..., details: [...]} 형식
+# papers: (선택) publications.csv 논문 제목의 앞부분 → 제목·첫 저자·저널·연도 자동 표시
+
+- id: bioinformatics
+  title: "Bioinformatics"
+  description: >
+    We analyze bulk and single-cell multi-omics data mainly with established public
+    packages in R and Python, and write our own code and tools where needed,
+    with AI-assisted programming to speed up development.
+  image: assets/methods/bioinformatics.png
+  caption: "Example image: single-cell clustering (simulated data)"
+  items:
+    - "R / Python programming (AI-assisted)"
+    - "Bulk and single-cell transcriptome / chromatin accessibility analysis"
+    - "Genome assembly and structural variant analysis"
+  papers:
+    - "GDBr: genomic signature interpretation tool"
+    - "A beginner's guide to assembling a draft genome"
+
+- id: omics
+  title: "Omics Data Generation"
+  description: >
+    We generate our own sequencing libraries, from bulk tissue to single cells
+    and nuclei.
+  image: assets/methods/omics.png
+  caption: "Example image: differential expression (simulated data)"
+  items:
+    - "Bulk RNA sequencing"
+    - "Bulk ATAC sequencing"
+    - name: "Single-cell (single-nucleus) RNA / ATAC sequencing"
+      details:
+        - "10x Genomics Chromium"
+        - "Single-cell combinatorial indexing"
+
+- id: molecular-biology
+  title: "Molecular Biology"
+  description: >
+    We build genetic tools to perturb and track genes in cells. (draft)
+  image: assets/methods/molecular.png
+  caption: "Example image: lentiviral vector map (schematic)"
+  items:
+    - "Cloning"
+    - "Lentivirus production"
+
+- id: cell-culture
+  title: "Cell Culture"
+  description: >
+    We model aging and senescence in human and mouse cells. (draft)
+  image: assets/methods/cell-culture.png
+  caption: "Example image: immunofluorescence of cultured cells (simulated)"
+  items:
+    - "Human fibroblasts"
+    - "Human hepatic stellate cells"
+    - "Mouse hepatocytes"
+    - "Primary mouse cell culture"
+
+- id: animal-models
+  title: "Animal Models"
+  description: >
+    We compare young and aged mice and use genetic and disease models to test
+    how aging shapes tissue function. (draft)
+  image: assets/methods/animal.png
+  caption: "Example image: mouse liver phenotype (simulated data)"
+  items:
+    - "Mouse models: young and aged mice, conditional knockout (cKO) mice"
+    - "Mouse disease models: MASH, liver fibrosis"

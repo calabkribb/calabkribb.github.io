@@ -1,45 +1,93 @@
 /*-- scss:defaults --*/
-$sidebar-bg: #193747;
-$sidebar-fg: #e8eef1;
-$sidebar-hl: #ffffff;
+$primary: #193747;
 $link-color: #1f6f8b;
+$navbar-bg: #ffffff;
+$navbar-fg: #193747;
+$navbar-hl: #1f6f8b;
+
+// 글꼴: 한글·영문을 같은 글꼴로 통일 (Noto Sans KR은 한글과 라틴 문자를 모두 포함).
+// cosmo 테마 기본값(Source Sans Pro)은 한글이 없어 한글만 시스템 글꼴로 바뀌어 보였음.
+$web-font-path: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap";
+$font-family-sans-serif: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 
 /*-- scss:rules --*/
-// 왼쪽 사이드바: 사진 배경 + 어두운 반투명 막 (hostmicrobe 스타일)
-// 이미지 경로는 styles.scss 파일 위치 기준 (Quarto가 출력 시 자동 복사·보정)
-#quarto-sidebar {
+// 이미지 경로는 styles.scss 파일 위치 기준으로 쓸 것 (CLAUDE.md 규칙 4)
+
+// ---- 상단 메뉴바: 로고 크기와 아래 구분선 ----
+.navbar { border-bottom: 1px solid #e5e8eb; }
+.navbar-brand .navbar-logo { max-height: 44px; }
+.navbar-title { font-weight: 600; letter-spacing: 0.01em; }
+
+// ---- 홈 배너 (index.qmd의 ::: {.hero}) : 사진 배경 + 어두운 막 + 가운데 문구 ----
+.hero {
   background-image:
-    linear-gradient(rgba(25, 55, 71, 0.82), rgba(25, 55, 71, 0.82)),
-    url("assets/sidebar-bg.jpg");
+    linear-gradient(rgba(25, 55, 71, 0.78), rgba(25, 55, 71, 0.78)),
+    url("assets/hero-bg.jpg");
   background-size: cover;
   background-position: center;
-}
-
-// 넓은 화면에서 순서: 로고 → 랩 이름/태그라인 → 검색 → 메뉴
-@media (min-width: 992px) {
-  #quarto-sidebar { display: flex; flex-direction: column; }
-  #quarto-sidebar .sidebar-header        { order: 1; text-align: center; }
-  #quarto-sidebar .quarto-sidebar-header { order: 2; }
-  #quarto-sidebar > .flex-shrink-0       { order: 3; }
-  #quarto-sidebar .sidebar-menu-container{ order: 4; }
-}
-
-#quarto-sidebar .sidebar-logo {
-  max-width: 110px;
-  margin: 1.5rem auto 0.5rem auto;
-}
-#quarto-sidebar .sidebar-title { color: #ffffff; }
-#quarto-sidebar .sidebar-tools-main {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.25rem;
-}
-#quarto-sidebar .quarto-navigation-tool { color: #e8eef1; }
-#quarto-sidebar .quarto-sidebar-header {
-  color: #e8eef1;
+  color: #ffffff;
   text-align: center;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin: 0.5rem 0 1rem 0;
+  padding: 6rem 1.5rem;
+  margin-bottom: 2.5rem;
+  h1 { color: #ffffff; font-size: 2.4rem; font-weight: 600; margin-bottom: 1rem; }
+  p  { max-width: 42rem; margin: 0 auto 1.5rem auto; font-size: 1.1rem; }
+  .btn { border-radius: 2rem; padding: 0.5rem 1.6rem; }
 }
-#quarto-sidebar .sidebar-item-text { font-size: 1.05rem; }
+
+// ---- 구성원 카드 (team.qmd listing) : 사진을 모두 3:4 같은 크기로 잘라 표시 ----
+// Quarto가 listing id 앞에 "listing-"을 붙이므로 #listing-members.
+// listing이 img에 height:150px를 인라인으로 넣기 때문에 !important로 덮어씀.
+// object-fit: cover = 비율이 달라도 찌그러뜨리지 않고 넘치는 부분만 잘라냄
+// object-position: top = 잘라낼 때 머리 쪽을 남김
+#listing-members .card { border: none; background: transparent; }
+#listing-members .card-img-top { margin: 0; }
+#listing-members img.card-img {
+  aspect-ratio: 3 / 4;
+  height: auto !important;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0;
+}
+#listing-members .card-body { padding: 0.6rem 0 1rem 0; }
+#listing-members .card-title { font-size: 1.05rem; margin-bottom: 0.1rem; }
+#listing-members .card-subtitle { font-size: 0.9rem; color: #5b6770; }
+// 휴대폰 화면에서는 한 줄에 1명 대신 2명씩 (사진이 화면을 가득 채우지 않도록)
+@media (max-width: 575.98px) {
+  #listing-members .list.grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #listing-members .list.grid > * { grid-column: auto !important; }
+}
+
+// ---- 구성원 개인 페이지 (about: trestles) 사진도 같은 비율 ----
+.quarto-about-trestles .about-image {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+}
+
+// ---- Research 프로젝트 사이 구분선 ----
+.project {
+  border-top: 1px solid #dfe3e6;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  .figure-caption, figcaption { font-size: 0.85rem; }
+}
+.key-papers li { margin-bottom: 0.6rem; }
+.key-papers .meta { color: #5b6770; font-size: 0.9rem; }
+
+// Research 연구비 목록 (한글): 논문 목록보다 한 단계 작고 연한 색
+.grants { font-size: 0.9rem; color: #3d4a52; }
+.grants li { margin-bottom: 0.3rem; }
+
+// Models & Tools 분야별 카드: 왼쪽 예시 이미지, 오른쪽 설명 (Research와 같은 구분선 사용)
+.method img { border: 1px solid #e5e8eb; }
+.method .techniques li { margin-bottom: 0.2rem; }
+
+// Outreach 강연 카드: YouTube 썸네일(hqdefault, 4:3 위아래 검은 띠 포함)을 16:9로 잘라 띠 제거
+.lectures img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 4px;
+}
+.lectures .meta { color: #5b6770; font-size: 0.85rem; }

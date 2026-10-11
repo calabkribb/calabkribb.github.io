@@ -1,39 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://calabkribb.github.io/photos.html</loc>
+    <lastmod>2026-10-11T13:21:45.912Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/inhee-choi.html</loc>
+    <lastmod>2026-10-11T14:11:20.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/joyoung-kim.html</loc>
+    <lastmod>2026-10-11T14:11:20.614Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/jubin-kang.html</loc>
+    <lastmod>2026-10-11T14:11:20.616Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/seonhyeok-hwang.html</loc>
+    <lastmod>2026-10-11T14:11:20.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/woojin-shim.html</loc>
+    <lastmod>2026-10-11T14:11:20.625Z</lastmod>
+  </url>
+  <url>
     <loc>https://calabkribb.github.io/publications.html</loc>
-    <lastmod>2026-10-11T12:37:51.278Z</lastmod>
+    <lastmod>2026-10-11T13:21:45.895Z</lastmod>
   </url>
   <url>
     <loc>https://calabkribb.github.io/news.html</loc>
-    <lastmod>2026-10-11T12:12:53.163Z</lastmod>
+    <lastmod>2026-10-11T13:21:45.903Z</lastmod>
   </url>
   <url>
     <loc>https://calabkribb.github.io/join.html</loc>
-    <lastmod>2026-10-11T12:12:53.170Z</lastmod>
+    <lastmod>2026-10-11T14:11:31.139Z</lastmod>
   </url>
   <url>
-    <loc>https://calabkribb.github.io/research/topic1.html</loc>
-    <lastmod>2026-10-11T12:12:37.122Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calabkribb.github.io/research/topic3.html</loc>
-    <lastmod>2026-10-11T12:12:37.126Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calabkribb.github.io/research/topic2.html</loc>
-    <lastmod>2026-10-11T12:12:37.124Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calabkribb.github.io/research/index.html</loc>
-    <lastmod>2026-10-11T12:12:30.572Z</lastmod>
+    <loc>https://calabkribb.github.io/research.html</loc>
+    <lastmod>2026-10-11T13:21:45.877Z</lastmod>
   </url>
   <url>
     <loc>https://calabkribb.github.io/team.html</loc>
-    <lastmod>2026-10-11T12:12:53.140Z</lastmod>
+    <lastmod>2026-10-11T13:21:45.887Z</lastmod>
   </url>
   <url>
     <loc>https://calabkribb.github.io/index.html</loc>
-    <lastmod>2026-10-11T12:12:21.737Z</lastmod>
+    <lastmod>2026-10-11T14:11:31.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/methods.html</loc>
+    <lastmod>2026-10-11T14:54:59.722Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/juyeon-kim.html</loc>
+    <lastmod>2026-10-11T14:11:20.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/sohee-kim.html</loc>
+    <lastmod>2026-10-11T14:11:20.623Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/chuna-kim.html</loc>
+    <lastmod>2026-10-11T14:47:22.439Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/team/yongju-yoo.html</loc>
+    <lastmod>2026-10-11T14:11:20.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calabkribb.github.io/outreach.html</loc>
+    <lastmod>2026-10-11T14:47:16.841Z</lastmod>
   </url>
 </urlset>

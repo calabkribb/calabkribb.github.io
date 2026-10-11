@@ -1,0 +1,24 @@
+---
+title: "Outreach"
+description: "Public lectures and writings on aging science by Chuna Kim (in Korean)."
+---
+
+<!-- 강연 영상은 data/lectures.csv에서 자동 생성 (date=YYYY-MM, YouTube 주소만 넣으면 썸네일 자동).
+     date는 YouTube 게시월 기준. 실제 강연일과 다르면 csv에서 고칠 것. -->
+
+## Public lectures
+
+```{r}
+#| echo: false
+#| results: asis
+source("R/site.R")
+show_lectures()
+```
+
+## Writings
+
+- 2022 &nbsp; 「노화 정복의 신호탄을 쏘다」, 《스켑틱》 27호, 바다출판사
+- 2022 &nbsp; 「노화 치료 시대의 서막에서」, 《스켑틱》 26호, 바다출판사
+- 2019 &nbsp; 「새 모델동물 운동」, BRIC
+- 2017 &nbsp; 《벌레의 마음》, 바다출판사
+- 2013–2016 &nbsp; 「논문 읽어주는 엘레강스 펜클럽」, 한겨레 사이언스온

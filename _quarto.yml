@@ -4,39 +4,42 @@ project:
   resources:
     - .nojekyll             # GitHub Pages의 Jekyll 처리 끄기 (render 때마다 docs/로 복사)
 
-lang: ko                    # 기본 언어. 영어는 각 페이지의 English 탭으로 제공
+lang: en
 date-modified: last-modified  # 페이지 상단에 최종 수정일 표시
-language:
-  title-block-modified: "최종 수정 · Last modified"  # Quarto 한국어 번역에 이 항목이 없어 직접 지정
 
 website:
-  title: "CALab"
+  title: "Cellular Agenomics Lab"
   site-url: "https://calabkribb.github.io"   # sitemap.xml 생성에 필요
-  description: "Cellular Aging Laboratory (CALab), KRIBB — 세포노화 연구실"
-  page-footer: "© 2026 CALab · [KRIBB](https://www.kribb.re.kr)"
-  sidebar:
-    style: docked
-    logo: assets/logo.png
-    title: "CALab"
-    header: "**Cellular Aging Laboratory**<br>세포노화 연구실 · KRIBB"
-    contents:
-      - text: "홈 · Home"
-        href: index.qmd
-      - text: "연구 · Research"
-        href: research/index.qmd
-      - text: "구성원 · Team"
-        href: team.qmd
-      - text: "논문 · Publications"
-        href: publications.qmd
-      - text: "소식 · News"
-        href: news.qmd
-      - text: "합류 · Join"
-        href: join.qmd
-    tools:
+  description: "Cellular Agenomics Lab (CALab) at KRIBB"
+  search: false             # 메뉴바 검색 아이콘 숨김
+  page-footer:
+    left: "© 2020–2026 Cellular Agenomics Lab · [KRIBB](https://www.kribb.re.kr)"
+    right:
       - icon: envelope
-        href: "mailto:pi-email@example.com"
-      - icon: github
-        href: "https://github.com/calabkribb"
+        href: "mailto:kimchuna@kribb.re.kr"
+  # 상단 메뉴바: 왼쪽 로고+연구실 이름, 오른쪽 메뉴 (caojunyuelab.org 스타일)
+  navbar:
+    logo: assets/logo.png
+    title: "Cellular Agenomics Lab"
+    background: light
+    collapse-below: xl      # 메뉴 8개라 1200px 미만에서는 햄버거 메뉴로 접음 (그보다 좁으면 메뉴가 여러 줄로 깨짐)
+    right:
+      - text: Research
+        href: research.qmd
+      - text: Models & Tools
+        href: methods.qmd
+      - text: Team
+        href: team.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: News
+        href: news.qmd
+      - text: Photos
+        href: photos.qmd
+      - text: Outreach
+        href: outreach.qmd
+      - text: Join us
+        href: join.qmd
 
 format:
   html:

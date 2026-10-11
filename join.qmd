@@ -1,70 +1,33 @@
 ---
-title: "합류하기"
-subtitle: "Join us"
+title: "Join us"
+lang: ko        # 이 페이지만 한국어 (사이트 기본은 영어)
 ---
 
-::: {.panel-tabset group="lang"}
+세포노화와 노화 미세환경을 함께 연구할 박사후연구원, 대학원생, 학부연구생을 모집합니다.
+우리 연구실은 바이오인포매틱스 분석과 실험을 모두 수행합니다. (placeholder)
 
-## 한국어
-
-세포노화·노화 미세환경 연구를 함께할 박사후연구원, 대학원생, 학부연구생을 모집합니다. (placeholder)
-
-### 모집 분야
+## 모집 분야
 
 | 구분 | 모집 | 요건 |
 |---|---|---|
-| **박사후연구원** | 0명 모집 중 | 요건 한 줄 (예: 단일세포·공간 오믹스 분석 경험) |
-| **대학원생** (석사·박사) | 매년 0명 | 요건 한 줄 (지원 경로·학위과정 안내 작성 예정) |
+| **박사후연구원** | 0명 모집 중 | 요건 한 줄 (예: 단일세포·공간 오믹스 분석 또는 마우스 노화 모델 경험) |
+| **대학원생** (석박사통합과정) | 매년 0명 | 요건 한 줄 (학위과정·지원 경로 안내 작성 예정) |
 | **학부연구생 / 인턴** | 상시 | 요건 한 줄 |
 
-### 연구실 문화
+## 연구실 문화
 
 - 연구실이 중요하게 여기는 가치 1 (작성 예정)
 - 연구실이 중요하게 여기는 가치 2
 - 구성원 지원 방식 (멘토링, 학회 참석, 진로 지원 등)
 
-### 연구 질문
+## 연구 질문
 
 우리가 답하고 싶은 질문들 (작성 예정):
 
 - 질문 1
 - 질문 2
 
-### 지원 방법
+## 지원 방법
 
-[pi-email@example.com](mailto:pi-email@example.com)로 연구 관심사와 이력서(CV)를 보내 주세요.
-모든 직급이 같은 주소로 지원합니다.
-
-## English
-
-We are recruiting postdoctoral researchers, graduate students, and undergraduate
-researchers interested in cellular senescence and aging microenvironments. (placeholder)
-
-### Open positions
-
-| Position | Openings | Requirements |
-|---|---|---|
-| **Postdoctoral Researcher** | 0 open | One line (e.g., experience in single-cell / spatial omics analysis) |
-| **Graduate Student** (MS / PhD) | 0 per year | One line (admission route to be described) |
-| **Undergraduate Researcher / Intern** | Rolling | One line |
-
-### Lab culture
-
-- Value the lab cares about 1 (to be written)
-- Value the lab cares about 2
-- How we support members (mentoring, conferences, career development)
-
-### Research questions
-
-Questions we want to answer (to be written):
-
-- Question 1
-- Question 2
-
-### How to apply
-
-Send your research interests and CV to
-[pi-email@example.com](mailto:pi-email@example.com).
-All positions use the same address.
-
-:::
+[kimchuna@kribb.re.kr](mailto:kimchuna@kribb.re.kr)로 연구 관심사와 이력서(CV)를 보내 주세요.
+모든 구분이 같은 주소로 지원합니다.
