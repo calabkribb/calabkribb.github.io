@@ -1,0 +1,103 @@
+[
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Author A, Author B. Placeholder title one. Journal X (2026).",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "publications.html#section",
+    "href": "publications.html#section",
+    "title": "Publications",
+    "section": "",
+    "text": "Author A, Author B. Placeholder title one. Journal X (2026).",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "publications.html#section-1",
+    "href": "publications.html#section-1",
+    "title": "Publications",
+    "section": "2025",
+    "text": "2025\n\nAuthor C, Author A. Placeholder title two. Journal Y (2025).\nAuthor D. Placeholder title three. Journal Z (2025).",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "Team",
+    "section": "",
+    "text": "Member A\nPrincipal Investigator\n\n\n\nMember B\nPhD student\n\n\n\nMember C\nResearcher",
+    "crumbs": [
+      "Team"
+    ]
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Our research interests",
+    "section": "",
+    "text": "Short paragraph introducing the lab’s research program (placeholder).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch topic 1 (placeholder)\n\n\nOne- or two-line summary of topic 1 shown on the card.\n\n\n\n\n\n\n\n\n\n\n\n\nResearch topic 2 (placeholder)\n\n\nOne- or two-line summary of topic 2 shown on the card.\n\n\n\n\n\n\n\n\n\n\n\n\nResearch topic 3 (placeholder)\n\n\nOne- or two-line summary of topic 3 shown on the card.\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "research/topic2.html",
+    "href": "research/topic2.html",
+    "title": "Research topic 2 (placeholder)",
+    "section": "",
+    "text": "Detailed description of research topic 2 goes here."
+  },
+  {
+    "objectID": "research/topic3.html",
+    "href": "research/topic3.html",
+    "title": "Research topic 3 (placeholder)",
+    "section": "",
+    "text": "Detailed description of research topic 3 goes here."
+  },
+  {
+    "objectID": "research/topic1.html",
+    "href": "research/topic1.html",
+    "title": "Research topic 1 (placeholder)",
+    "section": "",
+    "text": "Detailed description of research topic 1 goes here."
+  },
+  {
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "Tools",
+    "section": "",
+    "text": "Placeholder for methods (e.g., single-cell RNA-seq, ATAC-seq, spatial transcriptomics).",
+    "crumbs": [
+      "Tools"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cellular Aging Laboratory",
+    "section": "",
+    "text": "This is a test page for GitHub Pages hosting. All content is placeholder.\nWe study cellular senescence and aging microenvironments using single-cell and spatial multi-omics.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "media.html",
+    "href": "media.html",
+    "title": "Media",
+    "section": "",
+    "text": "Placeholder for YouTube / TV / lecture appearances.",
+    "crumbs": [
+      "Media"
+    ]
+  }
+]

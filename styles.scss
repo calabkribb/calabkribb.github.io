@@ -1,0 +1,45 @@
+/*-- scss:defaults --*/
+$sidebar-bg: #193747;
+$sidebar-fg: #e8eef1;
+$sidebar-hl: #ffffff;
+$link-color: #1f6f8b;
+
+/*-- scss:rules --*/
+// 왼쪽 사이드바: 사진 배경 + 어두운 반투명 막 (hostmicrobe 스타일)
+// 이미지 경로는 styles.scss 파일 위치 기준 (Quarto가 출력 시 자동 복사·보정)
+#quarto-sidebar {
+  background-image:
+    linear-gradient(rgba(25, 55, 71, 0.82), rgba(25, 55, 71, 0.82)),
+    url("assets/sidebar-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+// 넓은 화면에서 순서: 로고 → 랩 이름/태그라인 → 검색 → 메뉴
+@media (min-width: 992px) {
+  #quarto-sidebar { display: flex; flex-direction: column; }
+  #quarto-sidebar .sidebar-header        { order: 1; text-align: center; }
+  #quarto-sidebar .quarto-sidebar-header { order: 2; }
+  #quarto-sidebar > .flex-shrink-0       { order: 3; }
+  #quarto-sidebar .sidebar-menu-container{ order: 4; }
+}
+
+#quarto-sidebar .sidebar-logo {
+  max-width: 110px;
+  margin: 1.5rem auto 0.5rem auto;
+}
+#quarto-sidebar .sidebar-title { color: #ffffff; }
+#quarto-sidebar .sidebar-tools-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+#quarto-sidebar .quarto-navigation-tool { color: #e8eef1; }
+#quarto-sidebar .quarto-sidebar-header {
+  color: #e8eef1;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+}
+#quarto-sidebar .sidebar-item-text { font-size: 1.05rem; }

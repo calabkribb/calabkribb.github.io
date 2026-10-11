@@ -1,0 +1,8 @@
+---
+title: "Cellular Aging Laboratory"
+---
+
+This is a **test page** for GitHub Pages hosting. All content is placeholder.
+
+We study cellular senescence and aging microenvironments using single-cell
+and spatial multi-omics.

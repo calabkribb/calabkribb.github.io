@@ -1,0 +1,18 @@
+---
+title: "Publications"
+---
+
+```{r}
+#| echo: false
+#| results: asis
+pubs <- read.csv("data/publications.csv", stringsAsFactors = FALSE)
+pubs <- pubs[order(-pubs$year), ]
+for (y in unique(pubs$year)) {
+  cat("\n## ", y, "\n\n", sep = "")
+  sub <- pubs[pubs$year == y, ]
+  for (i in seq_len(nrow(sub))) {
+    cat("- ", sub$authors[i], ". **", sub$title[i], "**. *",
+        sub$journal[i], "* (", sub$year[i], ").\n", sep = "")
+  }
+}
+```

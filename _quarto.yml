@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs          # GitHub Pages가 읽을 폴더
+  resources:
+    - .nojekyll             # GitHub Pages의 Jekyll 처리 끄기 (render 때마다 docs/로 복사)
+
+website:
+  title: "CALab"
+  page-footer: "© 2026 CALab · KRIBB"
+  sidebar:
+    style: docked
+    logo: assets/logo.png
+    title: "CALab"
+    header: "**Cellular Aging Laboratory**<br>Aging microenvironments & multi-omics"
+    contents:
+      - text: Home
+        href: index.qmd
+      - text: Research
+        href: research/index.qmd
+      - text: Team
+        href: team.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: Tools
+        href: tools.qmd
+      - text: Media
+        href: media.qmd
+      - text: Photos
+        href: gallery.qmd
+    tools:
+      - icon: envelope
+        href: "mailto:someone@example.com"
+      - icon: github
+        href: "https://github.com/calabkribb"
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: false

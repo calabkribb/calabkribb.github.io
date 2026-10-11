@@ -1,0 +1,28 @@
+---
+title: "Team"
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+![](assets/logo.png){width=120px}
+
+**Member A** \
+Principal Investigator
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![](assets/logo.png){width=120px}
+
+**Member B** \
+PhD student
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![](assets/logo.png){width=120px}
+
+**Member C** \
+Researcher
+:::
+
+:::

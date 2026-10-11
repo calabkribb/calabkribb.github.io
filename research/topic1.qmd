@@ -1,0 +1,9 @@
+---
+title: "Research topic 1 (placeholder)"
+description: "One- or two-line summary of topic 1 shown on the card."
+image: topic1.jpg
+---
+
+![](topic1.jpg){width=60%}
+
+Detailed description of research topic 1 goes here.

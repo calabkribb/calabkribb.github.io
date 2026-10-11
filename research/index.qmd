@@ -1,0 +1,11 @@
+---
+title: "Our research interests"
+listing:
+  contents: "topic*.qmd"
+  type: grid
+  grid-columns: 2
+  sort: "title"
+  fields: [image, title, description]
+---
+
+Short paragraph introducing the lab's research program (placeholder).
