@@ -41,9 +41,13 @@
   검색 아이콘 없음(`search: false`), GitHub 아이콘 노출하지 않음.
   홈(`index.qmd`)은 로고/이름 클릭.
 - 데이터 → 페이지 자동 생성 (페이지가 아니라 데이터 파일을 수정할 것):
-  - `data/projects.yml` → research.qmd. `papers`에 publications.csv 논문 제목 앞부분을 적으면
-    제목·첫 저자·저널·연도 자동 표시(못 찾으면 render 에러). `grants`(한글 가능)→Key papers 아래 Funding.
-    모식도는 `assets/projects/`. 주제: Aging Atlas, Cellular Senescence, Aging-associated Disease
+  - `data/projects.yml` → research.qmd (2026-10-19 개편). 주제: Aging environments, Cell-fate decisions,
+    From fate to disease (anchor `#aging-environments`, `#cell-fate-decisions`, `#fate-to-disease`).
+    필드: `question`, `what_we_do`, `figure`·`alt`(`assets/research/`), `papers`(title·authors·journal·year·doi를
+    직접 기입, PubMed 제목 기준. publications.csv와 연결 안 함), `funding`(과제번호 확정 전에는 `[]` → 미표시).
+    개요 문단은 research.qmd의 `description`, 개요 그림·BioArt 출처 문장은 research.qmd 본문.
+    Research 페이지만 `date-modified: ""`로 수정일 숨김.
+  - `key_paper()`(제목 앞부분으로 publications.csv 검색)는 이제 methods.yml에서만 사용.
   - `data/methods.yml` → methods.qmd (분야별 예시 이미지·설명·기법 목록(하위 항목 `{name, details}`)·대표 논문).
     이미지는 `assets/methods/` (현재 R로 만든 모의 데이터 예시 → 실제 이미지로 교체)
   - `data/publications.csv` → publications.qmd (`key=TRUE`→Selected 탭, `topics`(;구분)→주제 탭,

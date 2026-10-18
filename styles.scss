@@ -85,9 +85,37 @@ $font-family-sans-serif: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "App
 .key-papers li { margin-bottom: 0.6rem; }
 .key-papers .meta { color: #5b6770; font-size: 0.9rem; }
 
-// Research 연구비 목록 (한글): 논문 목록보다 한 단계 작고 연한 색
-.grants { font-size: 0.9rem; color: #3d4a52; }
-.grants li { margin-bottom: 0.3rem; }
+// ---- Research 페이지 (research.qmd + R/site.R show_projects()) ----
+// 주제 번호 동그라미 (목차 카드와 섹션 제목에 공통)
+.theme-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.7em; height: 1.7em; border-radius: 50%;
+  background: $primary; color: #fff;
+  font-size: 0.8em; font-weight: 600; margin-right: 0.5rem; vertical-align: middle;
+}
+// 카드형 목차: 칸마다 테두리 상자, 누르면 해당 섹션으로 이동
+.theme-toc { margin: 1.5rem 0 1rem 0; }
+.theme-toc a.theme-card {
+  display: block; height: 100%;
+  border: 1px solid #dfe3e6; border-radius: 6px; padding: 0.8rem 1rem;
+  color: inherit; text-decoration: none; font-weight: 500;
+}
+.theme-toc a.theme-card:hover { border-color: $link-color; }
+// 휴대폰: 카드 폭이 약 96px라 "environments"가 테두리 밖으로 넘침 → 글자·여백을 줄이고 긴 단어는 하이픈으로 줄바꿈
+@media (max-width: 767.98px) {
+  .theme-toc a.theme-card { font-size: 0.85rem; padding: 0.6rem 0.5rem; hyphens: auto; overflow-wrap: break-word; }
+}
+// 섹션 제목 위 구분선 (Quarto가 {.theme} 클래스를 section에 붙임)
+section.theme > h2 { border-top: 1px solid #dfe3e6; border-bottom: none; padding-top: 2.5rem; margin-top: 3rem; }
+// 핵심 질문 강조
+.theme-question { color: $link-color; font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem; }
+// "WHAT WE DO" / "KEY PAPERS" / "FUNDING" 작은 라벨
+.theme-label {
+  display: block; margin-bottom: 0.5rem;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5b6770;
+}
+.theme-papers li { margin-bottom: 0.7rem; }
+.figure-credit { margin-top: 3rem; font-size: 0.85rem; color: #5b6770; }
 
 // Models & Tools 분야별 카드: 왼쪽 예시 이미지, 오른쪽 설명 (Research와 같은 구분선 사용)
 .method img { border: 1px solid #e5e8eb; }

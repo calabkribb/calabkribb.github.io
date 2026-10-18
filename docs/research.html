@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="How do cells and their tissue environments age? (draft one-line overview)">
+<meta name="description" content="We see aging as the accumulated residue of tissue repairs that were never completed. Damage that is not fully resolved leaves behind local niches — altered matrix, persistent senescent cells and failing regeneration — that arise at different times in different organs and reinforce themselves once formed. This makes aging a non-linear, mosaic process. We follow it from the niches where it begins, to the fate decisions of the cells within them, to the diseases they seed.">
 
 <title>Research – Cellular Agenomics Lab</title>
 <style>
@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-de64998b6dcbb54d6dc14d87bb5c52ad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dbd2bb136087a8821ce71dd01340b47d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    How do cells and their tissue environments age? (draft one-line overview)
+    We see aging as the accumulated residue of tissue repairs that were never completed. Damage that is not fully resolved leaves behind local niches — altered matrix, persistent senescent cells and failing regeneration — that arise at different times in different organs and reinforce themselves once formed. This makes aging a non-linear, mosaic process. We follow it from the niches where it begins, to the fate decisions of the cells within them, to the diseases they seed.
   </div>
 </div>
 
@@ -145,12 +145,6 @@ ul.task-list li input[type="checkbox"] {
 
     
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 11, 2026</p>
-    </div>
-  </div>
     
   </div>
   
@@ -159,98 +153,99 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- 내용은 data/projects.yml에서 자동 생성. 모식도는 assets/projects/에 넣고 projects.yml의 image에 경로를 적을 것 -->
-<p><a href="#aging-atlas">Aging Atlas</a> · <a href="#cellular-senescence">Cellular Senescence</a> · <a href="#aging-associated-disease">Aging-associated Disease</a></p>
-<div class="grid project">
-<section id="aging-atlas" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="aging-atlas">Aging Atlas</h2>
-<p>How do tissues and their local microenvironments change with age, cell by cell? We build single-cell and spatial multi-omic atlases of aging tissues to find the earliest aging-associated niches. (draft)</p>
-<p><strong>Key papers</strong></p>
-<div class="key-papers">
+<!-- 세 주제(목차 카드·질문·그림·What we do·Key papers)는 data/projects.yml에서 자동 생성.
+     그림은 assets/research/. 맨 아래 출처 문장은 그림에 쓴 NIAID BioArt 소재 표기 -->
+<div class="column-page">
+<p><img src="assets/research/research_overview.webp" class="img-fluid" alt="Overview of our research: human bodies become mosaic with age; zooming into an aged liver reveals a senescent niche; inside one cell of that niche, chromatin and RNA isoforms, protein signaling and metabolic rewiring lead to one of seven fates, and these fates feed back on the tissue."></p>
+</div>
+<div class="grid theme-toc">
+<div class="g-col-4">
+<p><a href="#aging-environments" class="theme-card"><span class="theme-num">1</span> Aging environments</a></p>
+</div>
+<div class="g-col-4">
+<p><a href="#cell-fate-decisions" class="theme-card"><span class="theme-num">2</span> Cell-fate decisions</a></p>
+</div>
+<div class="g-col-4">
+<p><a href="#fate-to-disease" class="theme-card"><span class="theme-num">3</span> From fate to disease</a></p>
+</div>
+</div>
+<section id="aging-environments" class="level2 theme page-columns page-full">
+<h2 class="theme anchored" data-anchor-id="aging-environments"><span class="theme-num">1</span> Aging environments</h2>
+<div class="theme-question">
+<p>Which tissue environments make cells age? In which organs — and in what order — do aging microenvironments emerge?</p>
+</div>
+<div class="column-page">
+<p><img src="assets/research/research_theme1.webp" class="img-fluid" alt="Young, middle-aged and old human bodies drawn as mosaics whose aging patches increase with age, with the order of organ aging marked as unknown; curves showing non-linear change with age; liver tissue patches forming a mosaic of aging regions; and a senescent niche."></p>
+</div>
+<div class="grid">
+<div class="g-col-12 g-col-md-7">
+<p><span class="theme-label">What we do</span></p>
+<p>We build single-cell multi-omic atlases to determine the order in which organs age and the changes that arise along the way.</p>
+</div>
+<div class="g-col-12 g-col-md-5">
+<p><span class="theme-label">Key papers</span></p>
+<div class="theme-papers">
 <ul>
-<li><strong>Quasi-spatial single-cell transcriptome based on physical properties defines early aging associated niche in liver tissue</strong><br>
-<span class="meta">Tak et al., <em>Nature Aging</em>, 2025</span></li>
-<li><strong>Identification of novel genes associated with exercise and calorie restriction effects in skeletal muscle</strong><br>
-<span class="meta">Kang et al., <em>Aging</em>, 2023</span></li>
+<li><a href="https://doi.org/10.1038/s43587-025-00857-7">Quasi-spatial single-cell transcriptome based on physical tissue properties defines early aging associated niche in liver</a><br>Tak et al., <strong>Nature Aging</strong>, 2025</li>
+<li><a href="https://doi.org/10.14348/molcells.2021.2239">Transcriptomic Analysis of Cellular Senescence: One Step Closer to Senescence Atlas</a><br>Kim et al., <strong>Molecules and Cells</strong>, 2021</li>
 </ul>
 </div>
-<p><strong>Funding</strong></p>
-<div class="grants">
-<ul>
-<li>과제명 (지원기관, 사업명, 20XX–20XX)</li>
-<li>과제명 (지원기관, 사업명, 20XX–20XX)</li>
-</ul>
+</div>
 </div>
 </section>
+<section id="cell-fate-decisions" class="level2 theme page-columns page-full">
+<h2 class="theme anchored" data-anchor-id="cell-fate-decisions"><span class="theme-num">2</span> Cell-fate decisions</h2>
+<div class="theme-question">
+<p>How does a cell integrate gene regulation, signaling and metabolism to choose senescence over other fates?</p>
+</div>
+<div class="column-page">
+<p><img src="assets/research/research_theme2.webp" class="img-fluid" alt="A cell receives ECM, SASP, metabolic and damage inputs; chromatin and RNA isoforms, protein signaling and a rewired metabolic circuit lead to proliferation, quiescence, apoptosis, ferroptosis or senescence, which is either transient and cleared or persistent and accumulating."></p>
+</div>
+<div class="grid">
+<div class="g-col-12 g-col-md-7">
+<p><span class="theme-label">What we do</span></p>
+<p>We follow cells longitudinally as they age, in cell and animal models, to define how the senescence fate decision is made, and we run genetic screens for factors that can reverse it.</p>
+</div>
 <div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/projects/project1.jpg" class="img-fluid figure-img"></p>
-<figcaption>Schematic placeholder</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="grid project">
-<section id="cellular-senescence" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="cellular-senescence">Cellular Senescence</h2>
-<p>What defines a senescent cell in a living tissue, and how does it reshape its neighbors? We profile senescence states and their crosstalk with surrounding cells. (draft)</p>
-<p><strong>Key papers</strong></p>
-<div class="key-papers">
+<p><span class="theme-label">Key papers</span></p>
+<div class="theme-papers">
 <ul>
-<li><strong>Transcriptomic analysis of cellular senescence: one step closer to senescence atlas</strong><br>
-<span class="meta">Kim et al., <em>Molecules and Cells</em>, 2021</span></li>
-<li><strong>Imperfect repair in aging: senescent cells and the hepatic fibrotic niche</strong><br>
-<span class="meta">Kim et al., <em>BMB Reports</em>, 2026</span></li>
+<li><a href="https://doi.org/10.1093/nar/gkad617">Distinct characteristics of two types of alternative lengthening of telomeres in mouse embryonic stem cells</a><br>Sung et al., <strong>Nucleic Acids Research</strong>, 2023</li>
+<li><a href="https://doi.org/10.1038/s41467-021-21341-x">Telomeres reforged with non-telomeric sequences in mouse embryonic stem cells</a><br>Kim et al., <strong>Nature Communications</strong>, 2021</li>
 </ul>
 </div>
-<p><strong>Funding</strong></p>
-<div class="grants">
-<ul>
-<li>과제명 (지원기관, 사업명, 20XX–20XX)</li>
-</ul>
+</div>
 </div>
 </section>
+<section id="fate-to-disease" class="level2 theme page-columns page-full">
+<h2 class="theme anchored" data-anchor-id="fate-to-disease"><span class="theme-num">3</span> From fate to disease</h2>
+<div class="theme-question">
+<p>How do these fate decisions feed back to build fibrotic, inflamed and declining tissues?</p>
+</div>
+<div class="column-page">
+<p><img src="assets/research/research_theme3.webp" class="img-fluid" alt="Repeated damage creates senescent cells; immune clearance leads back to repair, whereas immune evasion leads to matrix memory, senescent burden, regenerative failure and somatic clonal expansion, which drive fibrosis, inflammation, cancer and clonal hematopoiesis."></p>
+</div>
+<div class="grid">
+<div class="g-col-12 g-col-md-7">
+<p><span class="theme-label">What we do</span></p>
+<p>We model imperfect repair to understand, at spatial single-cell resolution, how aging microenvironments form.</p>
+</div>
 <div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/projects/project2.jpg" class="img-fluid figure-img"></p>
-<figcaption>Schematic placeholder</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="grid project">
-<section id="aging-associated-disease" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="aging-associated-disease">Aging-associated Disease</h2>
-<p>How does an aged tissue environment predispose to disease? We study fibrosis, inflammation, and tissue decline in aged and disease mouse models. (draft)</p>
-<p><strong>Key papers</strong></p>
-<div class="key-papers">
+<p><span class="theme-label">Key papers</span></p>
+<div class="theme-papers">
 <ul>
-<li><strong>Neutrophil-derived itaconate drives Kdm5b-associated epigenetic remodeling in alveolar macrophages to facilitate tiered pulmonary inflammation</strong><br>
-<span class="meta">Lim et al., <em>Cell Reports</em>, 2026</span></li>
-<li><strong>Exercise-induced CLCF1 attenuates age-related muscle and bone decline in mice</strong><br>
-<span class="meta">Kang et al., <em>Nature Communications</em>, 2025</span></li>
+<li><a href="https://doi.org/10.5483/BMBRep.2025-0224">Imperfect repair in aging: senescent cells and the hepatic fibrotic niche</a><br>Kim et al., <strong>BMB Reports</strong>, 2026</li>
+<li><a href="https://doi.org/10.1016/j.celrep.2026.117412">Neutrophil-derived itaconate facilitates tiered pulmonary inflammation via Kdm5b-associated epigenetic remodeling in alveolar macrophages</a><br>Lim et al., <strong>Cell Reports</strong>, 2026</li>
 </ul>
 </div>
-<p><strong>Funding</strong></p>
-<div class="grants">
-<ul>
-<li>과제명 (지원기관, 사업명, 20XX–20XX)</li>
-</ul>
-</div>
-</section>
-<div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/projects/project3.jpg" class="img-fluid figure-img"></p>
-<figcaption>Schematic placeholder</figcaption>
-</figure>
 </div>
 </div>
+<div class="figure-credit">
+<p>Illustrations adapted from the NIAID NIH BIOART Source (public domain).</p>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -67,36 +67,45 @@ show_news <- function(n = Inf) {
   for (i in seq_len(nrow(news))) cat("- **", news$date[i], "** — ", news$text[i], "\n", sep = "")
 }
 
-# ---- Research projects (data/projects.yml) ----
+# ---- Key paper (Models & Tools 페이지용: data/methods.yml) ----
 # papers에는 publications.csv 논문 제목의 앞부분을 적음 → 제목·저자·저널을 자동으로 가져옴
 key_paper <- function(prefix, pubs) {
   hit <- pubs[startsWith(tolower(pubs$title), tolower(prefix)), ]
-  if (nrow(hit) == 0) stop("projects.yml의 논문을 publications.csv에서 찾지 못함: ", prefix)
+  if (nrow(hit) == 0) stop("methods.yml의 논문을 publications.csv에서 찾지 못함: ", prefix)
   p <- hit[1, ]
   first <- sub(",.*", "", p$authors)
   title <- if (nzchar(p$doi)) paste0("[", p$title, "](https://doi.org/", p$doi, ")") else p$title
   paste0("- **", title, "** \\\n  [", first, " et al., *", p$journal, "*, ", p$year, "]{.meta}\n")
 }
 
+# Research 페이지: 카드형 목차 → 주제마다 [번호+이름 → 핵심 질문 → 전체 폭 그림 → What we do | Key papers]
+# 논문 서지정보는 projects.yml에 직접 적음 (PubMed 제목·DOI를 쓰기 위해 publications.csv와 연결하지 않음)
 show_projects <- function() {
   projects <- yaml::read_yaml("data/projects.yml")
-  pubs <- read_pubs()
-  # 맨 위 바로가기 링크
-  cat(paste0("[", vapply(projects, `[[`, "", "title"), "](#", vapply(projects, `[[`, "", "id"), ")",
-             collapse = " · "), "\n\n")
-  for (pr in projects) {
-    cat("::: {.grid .project}\n\n::: {.g-col-12 .g-col-md-7}\n")
-    cat("## ", pr$title, " {#", pr$id, "}\n\n", pr$description, "\n\n", sep = "")
-    cat("**Key papers**\n\n::: {.key-papers}\n")
-    for (k in pr$papers) cat(key_paper(k, pubs))
-    cat(":::\n\n")
-    if (length(pr$grants)) {
-      cat("**Funding**\n\n::: {.grants}\n")
-      for (g in pr$grants) cat("- ", g, "\n", sep = "")
-      cat(":::\n\n")
+  # 카드형 목차 (모바일에서도 3칸)
+  cat("::: {.grid .theme-toc}\n\n")
+  for (i in seq_along(projects)) {
+    cat("::: {.g-col-4}\n[[", i, "]{.theme-num} ", projects[[i]]$title, "](#", projects[[i]]$id,
+        "){.theme-card}\n:::\n\n", sep = "")
+  }
+  cat(":::\n\n")
+  for (i in seq_along(projects)) {
+    pr <- projects[[i]]
+    cat("## [", i, "]{.theme-num} ", pr$title, " {#", pr$id, " .theme}\n\n", sep = "")
+    cat("::: {.theme-question}\n", pr$question, "\n:::\n\n", sep = "")
+    cat("::: {.column-page}\n![](", pr$figure, "){fig-alt=\"", pr$alt, "\"}\n:::\n\n", sep = "")
+    cat("::: {.grid}\n\n::: {.g-col-12 .g-col-md-7}\n[What we do]{.theme-label}\n\n", pr$what_we_do, "\n:::\n\n", sep = "")
+    cat("::: {.g-col-12 .g-col-md-5}\n[Key papers]{.theme-label}\n\n::: {.theme-papers}\n", sep = "")
+    for (p in pr$papers) {
+      cat("- [", p$title, "](https://doi.org/", p$doi, ")<br>", p$authors, ", **", p$journal, "**, ", p$year, "\n", sep = "")
     }
     cat(":::\n\n")
-    cat("::: {.g-col-12 .g-col-md-5}\n![", pr$caption, "](", pr$image, ")\n:::\n\n:::\n\n", sep = "")
+    if (length(pr$funding)) {
+      cat("[Funding]{.theme-label}\n\n")
+      for (f in pr$funding) cat("- ", f, "\n", sep = "")
+      cat("\n")
+    }
+    cat(":::\n\n:::\n\n")
   }
 }
 
