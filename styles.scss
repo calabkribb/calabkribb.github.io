@@ -108,6 +108,13 @@ h2 .label-sm.kicker { margin-bottom: 0.3rem; }
 .tag-house { background: #f1f3f5; color: #5c6870; }
 .tag-collab { background: #fdeee3; color: #b5541c; }
 .figure-credit { margin-top: 3rem; font-size: 0.85rem; color: #5b6770; }
+// 원형 숫자 배지: Research 주제 번호, Team 도시별 인원 수
+.num-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.7em; height: 1.7em; border-radius: 50%;
+  background: $primary; color: #fff;
+  font-size: 0.8em; font-weight: 600; margin-right: 0.5rem; vertical-align: middle;
+}
 // 페이지 도입: 리드 문장(.page-lead, 크고 굵게) + 보통 크기 설명(.page-intro) — Research, Models & Tools
 .page-lead { font-size: 1.6rem; font-weight: 600; line-height: 1.3; color: $primary; margin-bottom: 0.6rem; }
 .page-intro { font-size: 1.1rem; color: #3d4a52; margin-bottom: 1.5rem; }
@@ -117,13 +124,6 @@ h2 .label-sm.kicker { margin-bottom: 0.3rem; }
 }
 
 // ==== Research 페이지 (research.qmd + R/site.R show_projects()) ====
-// 주제 번호 동그라미 (목차 카드와 섹션 제목에 공통)
-.theme-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 1.7em; height: 1.7em; border-radius: 50%;
-  background: $primary; color: #fff;
-  font-size: 0.8em; font-weight: 600; margin-right: 0.5rem; vertical-align: middle;
-}
 // 카드형 목차: .box-card 링크, 누르면 해당 섹션으로 이동
 .theme-toc { margin: 1.5rem 0 1rem 0; }
 .theme-toc a.box-card { display: block; height: 100%; padding: 0.8rem 1rem; color: inherit; text-decoration: none; font-weight: 500; }
@@ -154,6 +154,21 @@ img.mt-icon { width: 56px; height: 56px; }
 .mt-flex > p:first-child { margin: 0; flex: 0 0 72px; }
 .mt-flex > p { margin: 0; }
 .mt-flex img.mt-icon { width: 72px; height: 72px; }
+
+// ==== Team > Collaborators 탭 (team.qmd + R/site.R show_collaborators()) ====
+.cb-map { width: 100%; border: 1px solid #e3e8eb; border-radius: 10px; }
+// 데스크톱: 한국 지도가 스크롤해도 화면에 고정 (메뉴바 높이만큼 아래). 휴대폰(1단)에서는 고정하지 않음
+@media (min-width: 768px) { .cb-sticky { position: sticky; top: 5.5rem; } }
+// 도시 카드: 데스크톱 2열, 휴대폰 1열
+.cb-cities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+@media (max-width: 575.98px) { .cb-cities { grid-template-columns: 1fr; } }
+.cb-city-title { display: block; font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+.cb-city ul { list-style: none; padding: 0; margin: 0; }
+.cb-city li { margin: 0 0 0.55rem 0; line-height: 1.35; }
+.cb-inst { font-size: 0.85rem; color: #6c757d; }
+.cb-intl { align-items: center; margin-top: 1rem; }
+.cb-intl-card { margin-bottom: 0.8rem; }
+.cb-intl-card p { margin: 0; }
 
 // Outreach 강연 카드: YouTube 썸네일(hqdefault, 4:3 위아래 검은 띠 포함)을 16:9로 잘라 띠 제거
 .lectures img {

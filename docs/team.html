@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6809d2401586796e6ee926a9798f0c82.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a97434a1510f77193a4250ee13e5e465.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -186,7 +186,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -199,12 +199,6 @@ window.Quarto = {
 
     
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 11, 2026</p>
-    </div>
-  </div>
     
   </div>
   
@@ -214,7 +208,9 @@ window.Quarto = {
 
 
 <!-- 구성원 = team/ 폴더의 qmd 파일 하나씩. order 값 순서로 표시.
-     공동연구자 = data/collaborators.csv -->
+     공동연구자 = data/collaborators.yml (지도: assets/team/korea_map.svg, world_map.svg)
+     탭 전체를 .column-page로 감싸 넓은 폭으로 표시 -->
+<div class="column-page">
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Members</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Collaborators</a></li></ul>
 <div class="tab-content">
@@ -370,20 +366,83 @@ Integrated M.S./Ph.D.&nbsp;Student
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>We work closely with these labs.</p>
-<div class="grid">
-<section id="korea" class="level3 g-col-12 g-col-md-6">
+<p>We work closely with these labs across Korea and abroad.</p>
+<section id="korea" class="level3">
 <h3 class="anchored" data-anchor-id="korea">Korea</h3>
+<div class="grid cb-korea">
+<div class="g-col-12 g-col-md-5">
+<div class="cb-sticky">
+<p><img src="assets/team/korea_map.svg" class="cb-map img-fluid" alt="Map of South Korea showing collaborating labs in Seoul, Suwon, Daejeon, Daegu, Pohang and Jinju, connected to CALab at KRIBB in Daejeon"></p>
+</div>
+</div>
+<div class="g-col-12 g-col-md-7">
+<div class="cb-cities">
+<div class="box-card cb-city">
+<p><span class="cb-city-title"><span class="num-badge">5</span> Daejeon</span></p>
 <ul>
-<li><strong>Collaborator A Lab</strong>, Institution A — Joint project (placeholder)</li>
-<li><strong>Collaborator B Lab</strong>, Institution B — Joint project (placeholder)</li>
+<li><strong>Jong-Eun Park</strong><br><span class="cb-inst">KAIST · Graduate School of Medical Science and Engineering</span></li>
+<li><strong>Min Kyu Yum</strong><br><span class="cb-inst">KAIST · Graduate School of Medical Science and Engineering</span></li>
+<li><strong>Jun Kim</strong><br><span class="cb-inst">Chungnam National University · Department of Convergent Bioscience and Informatics</span></li>
+<li><strong>Ji Heon Noh</strong><br><span class="cb-inst">Chungnam National University · Department of Biochemistry</span></li>
+<li><strong>Hyon-Seung Yi</strong><br><span class="cb-inst">Chungnam National University · College of Medicine</span></li>
 </ul>
+</div>
+<div class="box-card cb-city">
+<p><span class="cb-city-title"><span class="num-badge">5</span> Seoul</span></p>
+<ul>
+<li><strong>Dong Wook Choi</strong><br><span class="cb-inst">Korea University · Department of Biotechnology</span></li>
+<li><strong>Ohman Kwon</strong><br><span class="cb-inst">University of Seoul · Department of Life Science</span></li>
+<li><strong>Jun Young Hong</strong><br><span class="cb-inst">Yonsei University · Department of Systems Biology</span></li>
+<li><strong>Gakyung Lee</strong><br><span class="cb-inst">Sejong University · Department of Integrative Biological Sciences and Industry</span></li>
+<li><strong>Cheolju Lee</strong><br><span class="cb-inst">Korea Institute of Science and Technology (KIST)</span></li>
+</ul>
+</div>
+<div class="box-card cb-city">
+<p><span class="cb-city-title"><span class="num-badge">3</span> Suwon</span></p>
+<ul>
+<li><strong>Su Myung Jung</strong><br><span class="cb-inst">Sungkyunkwan University · Department of Biological Sciences</span></li>
+<li><strong>Daehan Lee</strong><br><span class="cb-inst">Sungkyunkwan University · Department of Biological Sciences</span></li>
+<li><strong>Jae-Jun Kim</strong><br><span class="cb-inst">Sungkyunkwan University School of Medicine · Department of Precision Medicine</span></li>
+</ul>
+</div>
+<div class="box-card cb-city">
+<p><span class="cb-city-title"><span class="num-badge">2</span> Daegu</span></p>
+<ul>
+<li><strong>Young-Sam Lee</strong><br><span class="cb-inst">DGIST · Department of New Biology</span></li>
+<li><strong>Jaekwang Kim</strong><br><span class="cb-inst">Korea Brain Research Institute (KBRI) · Dementia Research Group</span></li>
+</ul>
+</div>
+<div class="box-card cb-city">
+<p><span class="cb-city-title"><span class="num-badge">1</span> Pohang</span></p>
+<ul>
+<li><strong>Min-Sik Lee</strong><br><span class="cb-inst">POSTECH · Department of Life Sciences</span></li>
+</ul>
+</div>
+<div class="box-card cb-city">
+<p><span class="cb-city-title"><span class="num-badge">1</span> Jinju</span></p>
+<ul>
+<li><strong>Jinsung Yang</strong><br><span class="cb-inst">Gyeongsang National University</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="international" class="level3 g-col-12 g-col-md-6">
+<section id="international" class="level3">
 <h3 class="anchored" data-anchor-id="international">International</h3>
-<ul>
-<li><strong>Collaborator C Lab</strong>, Institution C — Joint project (placeholder)</li>
-</ul>
+<div class="grid cb-intl">
+<div class="g-col-12 g-col-md-7">
+<p><img src="assets/team/world_map.svg" class="cb-map img-fluid" alt="Map showing international collaborations in Madrid, Spain, and in China and Japan through the A3 Foresight Program"></p>
+</div>
+<div class="g-col-12 g-col-md-5">
+<div class="box-card cb-intl-card">
+<p><strong>Solip Park lab</strong><br><span class="cb-inst">Spanish National Cancer Research Centre (CNIO), Madrid · Korea–Spain joint research project</span></p>
+</div>
+<div class="box-card cb-intl-card">
+<p><strong>A3 Foresight Program</strong><br><span class="cb-inst">Topic: Cellular Senescence · Korea–China–Japan</span></p>
+</div>
+</div>
+</div>
 </section>
 </div>
 </div>

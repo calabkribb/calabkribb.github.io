@@ -82,13 +82,13 @@ show_projects <- function() {
   # 카드형 목차 (모바일에서도 3칸)
   cat("::: {.grid .theme-toc}\n\n")
   for (i in seq_along(projects)) {
-    cat("::: {.g-col-4}\n[[", i, "]{.theme-num} ", projects[[i]]$title, "](#", projects[[i]]$id,
+    cat("::: {.g-col-4}\n[[", i, "]{.num-badge} ", projects[[i]]$title, "](#", projects[[i]]$id,
         "){.box-card}\n:::\n\n", sep = "")
   }
   cat(":::\n\n")
   for (i in seq_along(projects)) {
     pr <- projects[[i]]
-    cat("## [", i, "]{.theme-num} ", pr$title, " {#", pr$id, " .page-sec}\n\n", sep = "")
+    cat("## [", i, "]{.num-badge} ", pr$title, " {#", pr$id, " .page-sec}\n\n", sep = "")
     cat("::: {.theme-question}\n", pr$question, "\n:::\n\n", sep = "")
     cat("![](", pr$figure, "){fig-alt=\"", pr$alt, "\"}\n\n", sep = "")   # 그림은 본문 폭 (2026-10-19)
     cat("::: {.grid}\n\n::: {.g-col-12 .g-col-md-7}\n[What we do]{.label-sm}\n\n", pr$what_we_do, "\n:::\n\n", sep = "")
@@ -135,22 +135,27 @@ show_lectures <- function() {
   cat(":::\n")
 }
 
-# ---- Collaborators (data/collaborators.csv) ----
+# ---- Collaborators (data/collaborators.yml) ----
+# Korea: [한국 지도(데스크톱에서 sticky) | 도시 카드 2열], International: [세계 지도 | 카드].
+# 이름·소속은 yml 그대로. 도시 순서·사람 순서도 yml 순서. 도시 배지 숫자 = 그 도시 인원 수 (yml에서 계산)
+# 주의: 인원이 바뀌면 assets/team/korea_map.svg의 숫자도 고칠 것 (새 도시는 지도에 원을 새로 그려야 함)
 show_collaborators <- function() {
-  co <- read.csv("data/collaborators.csv", stringsAsFactors = FALSE)
-  co <- blank_na(co, c("url", "topic"))
-  cat("::: {.grid}\n\n")
-  for (r in unique(co$region)) {
-    cat("::: {.g-col-12 .g-col-md-6}\n### ", r, "\n\n", sep = "")
-    sub <- co[co$region == r, ]
-    for (i in seq_len(nrow(sub))) {
-      name <- if (nzchar(sub$url[i])) paste0("[", sub$name[i], "](", sub$url[i], ")") else sub$name[i]
-      topic <- if (nzchar(sub$topic[i])) paste0(" — ", sub$topic[i]) else ""
-      cat("- **", name, "**, ", sub$affiliation[i], topic, "\n", sep = "")
-    }
+  co <- yaml::read_yaml("data/collaborators.yml")
+  inst <- function(p) if (nzchar(p$department)) paste0(p$institution, " · ", p$department) else p$institution
+  cat("### Korea\n\n::: {.grid .cb-korea}\n\n::: {.g-col-12 .g-col-md-5}\n::: {.cb-sticky}\n",
+      "![](assets/team/korea_map.svg){.cb-map fig-alt=\"Map of South Korea showing collaborating labs in Seoul, Suwon, Daejeon, Daegu, Pohang and Jinju, connected to CALab at KRIBB in Daejeon\"}\n",
+      ":::\n:::\n\n::: {.g-col-12 .g-col-md-7}\n::: {.cb-cities}\n\n", sep = "")
+  for (ct in co$korea) {
+    cat("::: {.box-card .cb-city}\n[[", length(ct$people), "]{.num-badge} ", ct$city, "]{.cb-city-title}\n\n", sep = "")
+    for (p in ct$people) cat("- **", p$name, "**<br>[", inst(p), "]{.cb-inst}\n", sep = "")
     cat("\n:::\n\n")
   }
-  cat(":::\n")
+  cat(":::\n:::\n\n:::\n\n")
+  cat("### International\n\n::: {.grid .cb-intl}\n\n::: {.g-col-12 .g-col-md-7}\n",
+      "![](assets/team/world_map.svg){.cb-map fig-alt=\"Map showing international collaborations in Madrid, Spain, and in China and Japan through the A3 Foresight Program\"}\n",
+      ":::\n\n::: {.g-col-12 .g-col-md-5}\n", sep = "")
+  for (it in co$international) cat("::: {.box-card .cb-intl-card}\n**", it$name, "**<br>[", it$detail, "]{.cb-inst}\n:::\n\n", sep = "")
+  cat(":::\n\n:::\n")
 }
 
 # ---- Lab photos (photos/<행사종류>/YYYY-MM_설명.jpg) ----

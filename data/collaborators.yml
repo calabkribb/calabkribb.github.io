@@ -1,0 +1,75 @@
+# Collaborators shown on the Team page (Collaborators tab).
+# 표기 원칙: 이름만 (호칭·학위 없음). institution / department는 그대로 사용.
+# 도시 순서와 사람 순서는 이 파일 순서대로 표시한다.
+# 주의: 도시를 추가하거나 인원이 바뀌면 maps/korea_map.svg의 도시 원·숫자도 바꿔야 한다 (TASK.md 참고).
+
+korea:
+  - city: Daejeon
+    people:
+      - name: Jong-Eun Park
+        institution: KAIST
+        department: Graduate School of Medical Science and Engineering
+      - name: Min Kyu Yum
+        institution: KAIST
+        department: Graduate School of Medical Science and Engineering
+      - name: Jun Kim
+        institution: Chungnam National University
+        department: Department of Convergent Bioscience and Informatics
+      - name: Ji Heon Noh
+        institution: Chungnam National University
+        department: Department of Biochemistry
+      - name: Hyon-Seung Yi
+        institution: Chungnam National University
+        department: College of Medicine
+  - city: Seoul
+    people:
+      - name: Dong Wook Choi
+        institution: Korea University
+        department: Department of Biotechnology
+      - name: Ohman Kwon
+        institution: University of Seoul
+        department: Department of Life Science
+      - name: Jun Young Hong
+        institution: Yonsei University
+        department: Department of Systems Biology
+      - name: Gakyung Lee
+        institution: Sejong University
+        department: Department of Integrative Biological Sciences and Industry
+      - name: Cheolju Lee
+        institution: Korea Institute of Science and Technology (KIST)
+        department: ""
+  - city: Suwon
+    people:
+      - name: Su Myung Jung
+        institution: Sungkyunkwan University
+        department: Department of Biological Sciences
+      - name: Daehan Lee
+        institution: Sungkyunkwan University
+        department: Department of Biological Sciences
+      - name: Jae-Jun Kim
+        institution: Sungkyunkwan University School of Medicine
+        department: Department of Precision Medicine
+  - city: Daegu
+    people:
+      - name: Young-Sam Lee
+        institution: DGIST
+        department: Department of New Biology
+      - name: Jaekwang Kim
+        institution: Korea Brain Research Institute (KBRI)
+        department: Dementia Research Group
+  - city: Pohang
+    people:
+      - name: Min-Sik Lee
+        institution: POSTECH
+        department: Department of Life Sciences
+  - city: Jinju
+    people:
+      - name: Jinsung Yang
+        institution: Gyeongsang National University
+        department: ""
+
+international:
+  - name: Solip Park lab
+    detail: "Spanish National Cancer Research Centre (CNIO), Madrid · Korea–Spain joint research project"
+  - name: A3 Foresight Program
+    detail: "Topic: Cellular Senescence · Korea–China–Japan"

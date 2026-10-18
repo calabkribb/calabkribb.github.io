@@ -10,11 +10,14 @@ listing:
     image-placeholder: assets/team/placeholder.png
     sort-ui: false
     filter-ui: false
+date-modified: ""   # 이 페이지만 최종 수정일 표시 안 함 (사이트 전체 설정은 _quarto.yml)
 ---
 
 <!-- 구성원 = team/ 폴더의 qmd 파일 하나씩. order 값 순서로 표시.
-     공동연구자 = data/collaborators.csv -->
+     공동연구자 = data/collaborators.yml (지도: assets/team/korea_map.svg, world_map.svg)
+     탭 전체를 .column-page로 감싸 넓은 폭으로 표시 -->
 
+::: {.column-page}
 ::: {.panel-tabset}
 
 ## Members
@@ -24,7 +27,7 @@ listing:
 
 ## Collaborators
 
-We work closely with these labs.
+We work closely with these labs across Korea and abroad.
 
 ```{r}
 #| echo: false
@@ -33,4 +36,5 @@ source("R/site.R")
 show_collaborators()
 ```
 
+:::
 :::

@@ -60,7 +60,12 @@
     주제 목록·순서는 `R/site.R`의 `PUB_TOPICS`, 굵게 표시할 PI 이름은 `PI_NAME`)
   - `data/news.csv` → news.qmd 전체, index.qmd 최근 3건
   - `data/lectures.csv` → outreach.qmd 강연 카드 (YouTube 주소에서 썸네일 자동, date는 YouTube 게시월)
-  - `data/collaborators.csv` → team.qmd의 Collaborators 탭 (region별 묶음)
+  - `data/collaborators.yml` → team.qmd의 Collaborators 탭 (2026-10-19). `korea`(city별 people: name·institution·
+    department), `international`(name·detail). 이름·소속은 yml 그대로, 순서도 yml 순서. 도시 배지 숫자는 yml에서 계산.
+    지도 `assets/team/korea_map.svg`(도시 원 숫자 고정), `world_map.svg`.
+    **인원이 바뀌면 korea_map.svg의 해당 `<text>` 숫자도 고칠 것. 새 도시는 지도에 원·선을 새로 그려야 하므로
+    직접 고치지 말고 사용자에게 알릴 것.** render 후 배지 숫자와 지도 숫자가 같은지 확인.
+    Team 페이지는 탭 전체를 `.column-page`(넓은 폭)로 감쌈. 수정일 숨김(`date-modified: ""`).
   - `team/<이름>.qmd` 1인 1파일 → team.qmd Members 탭(listing, `order` 순) + 개인 페이지(about: trestles).
     PI: Research interests·Employment·Education & Training·Awards / 구성원: Research interests·Education & Training·Awards·Fellowship.
     Awards는 한글로 작성. 사진은 컬러.
@@ -68,8 +73,8 @@
 - `R/site.R` 페이지 공통 R 함수 (`show_pubs()`, `show_projects()`, `show_cards()`, `paper_list()`, `show_news()`, `show_collaborators()`, `show_photos()`)
 - `styles.scss` 공통 클래스 (Research·Models & Tools): `section.page-sec`(섹션 구분선), `.label-sm`(작은 대문자 라벨,
   제목 안 `.kicker`는 머리말), `.paper-list`, `.box-card`(테두리 카드), `.tag` + `.tag-rna/-space/-protein/-metabolite/-house/-collab`,
-  `.page-lead`/`.page-intro`(페이지 도입 리드 문장 + 설명).
-  페이지 전용은 `.theme-*`(Research), `.mt-*`(Models & Tools).
+  `.page-lead`/`.page-intro`(페이지 도입 리드 문장 + 설명), `.num-badge`(원형 숫자 배지: Research 주제 번호·Team 도시 인원).
+  페이지 전용은 `.theme-*`(Research), `.mt-*`(Models & Tools), `.cb-*`(Team Collaborators).
 - `assets/` 로고, 홈 배너 배경(`hero-bg.jpg`), `team/` 구성원 사진, `projects/` 모식도
 - `docs/` = render 산출물
 
