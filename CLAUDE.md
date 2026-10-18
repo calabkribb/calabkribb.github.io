@@ -36,6 +36,7 @@
 
 ## 파일 구조
 - `_quarto.yml` 사이트 설정(상단 navbar, footer, `site-url`, 최종 수정일), `styles.scss` 스타일
+- 휴대폰(768px 미만) 메뉴바: 로고 숨기고 제목을 "CALab"으로 표시 (`styles.scss`의 `.navbar-title::after`).
 - 메뉴(오른쪽): Research(`research.qmd`), Models & Tools(`methods.qmd`), Team(`team.qmd`), Publications, News,
   Photos, Outreach(`outreach.qmd`), Join us. 메뉴 8개라 `collapse-below: xl`(1200px 미만 햄버거 메뉴).
   검색 아이콘 없음(`search: false`), GitHub 아이콘 노출하지 않음.
@@ -46,6 +47,7 @@
     필드: `question`, `what_we_do`, `figure`·`alt`(`assets/research/`), `papers`(title·authors·journal·year·doi를
     직접 기입, PubMed 제목 기준. publications.csv와 연결 안 함), `funding`(과제번호 확정 전에는 `[]` → 미표시).
     개요 문단은 research.qmd의 `description`, 개요 그림·BioArt 출처 문장은 research.qmd 본문.
+    그림 4개 모두 본문(문단) 폭 — 2026-10-19 사용자 요청으로 `.column-page` 해제.
     Research 페이지만 `date-modified: ""`로 수정일 숨김.
   - `key_paper()`(제목 앞부분으로 publications.csv 검색)는 이제 methods.yml에서만 사용.
   - `data/methods.yml` → methods.qmd (분야별 예시 이미지·설명·기법 목록(하위 항목 `{name, details}`)·대표 논문).

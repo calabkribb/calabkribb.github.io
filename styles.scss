@@ -17,6 +17,13 @@ $font-family-sans-serif: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "App
 .navbar { border-bottom: 1px solid #e5e8eb; }
 .navbar-brand .navbar-logo { max-height: 44px; }
 .navbar-title { font-weight: 600; letter-spacing: 0.01em; }
+// 휴대폰(768px 미만): 로고와 긴 이름이 함께 들어가지 않아 "Cellular A…"로 잘림 → 로고를 숨기고 약자 "CALab"만 표시
+// (Quarto navbar는 화면 크기별 제목 설정이 없어 CSS로 원래 글자를 숨기고 ::after로 약자를 씀)
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-logo { display: none; }
+  .navbar-title { font-size: 0; }
+  .navbar-title::after { content: "CALab"; font-size: 1.25rem; }
+}
 
 // ---- 홈 배너 (index.qmd의 ::: {.hero}) : cell agent 이미지 배경 + 왼쪽 문구 ----
 // 모바일(768px 미만)은 세로형 이미지로 바꾸고, 아래 20rem 여백에 cell agent가 보이게 함

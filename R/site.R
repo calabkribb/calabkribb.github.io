@@ -78,7 +78,7 @@ key_paper <- function(prefix, pubs) {
   paste0("- **", title, "** \\\n  [", first, " et al., *", p$journal, "*, ", p$year, "]{.meta}\n")
 }
 
-# Research 페이지: 카드형 목차 → 주제마다 [번호+이름 → 핵심 질문 → 전체 폭 그림 → What we do | Key papers]
+# Research 페이지: 카드형 목차 → 주제마다 [번호+이름 → 핵심 질문 → 그림(본문 폭) → What we do | Key papers]
 # 논문 서지정보는 projects.yml에 직접 적음 (PubMed 제목·DOI를 쓰기 위해 publications.csv와 연결하지 않음)
 show_projects <- function() {
   projects <- yaml::read_yaml("data/projects.yml")
@@ -93,7 +93,7 @@ show_projects <- function() {
     pr <- projects[[i]]
     cat("## [", i, "]{.theme-num} ", pr$title, " {#", pr$id, " .theme}\n\n", sep = "")
     cat("::: {.theme-question}\n", pr$question, "\n:::\n\n", sep = "")
-    cat("::: {.column-page}\n![](", pr$figure, "){fig-alt=\"", pr$alt, "\"}\n:::\n\n", sep = "")
+    cat("![](", pr$figure, "){fig-alt=\"", pr$alt, "\"}\n\n", sep = "")   # 그림은 본문 폭 (2026-10-19)
     cat("::: {.grid}\n\n::: {.g-col-12 .g-col-md-7}\n[What we do]{.theme-label}\n\n", pr$what_we_do, "\n:::\n\n", sep = "")
     cat("::: {.g-col-12 .g-col-md-5}\n[Key papers]{.theme-label}\n\n::: {.theme-papers}\n", sep = "")
     for (p in pr$papers) {

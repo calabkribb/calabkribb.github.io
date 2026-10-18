@@ -7,9 +7,7 @@ date-modified: ""   # 이 페이지만 최종 수정일 표시 안 함 (사이�
 <!-- 세 주제(목차 카드·질문·그림·What we do·Key papers)는 data/projects.yml에서 자동 생성.
      그림은 assets/research/. 맨 아래 출처 문장은 그림에 쓴 NIAID BioArt 소재 표기 -->
 
-::: {.column-page}
 ![](assets/research/research_overview.webp){fig-alt="Overview of our research: human bodies become mosaic with age; zooming into an aged liver reveals a senescent niche; inside one cell of that niche, chromatin and RNA isoforms, protein signaling and metabolic rewiring lead to one of seven fates, and these fates feed back on the tissue."}
-:::
 
 ```{r}
 #| echo: false
