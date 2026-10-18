@@ -46,13 +46,16 @@
     From fate to disease (anchor `#aging-environments`, `#cell-fate-decisions`, `#fate-to-disease`).
     필드: `question`, `what_we_do`, `figure`·`alt`(`assets/research/`), `papers`(title·authors·journal·year·doi를
     직접 기입, PubMed 제목 기준. publications.csv와 연결 안 함), `funding`(과제번호 확정 전에는 `[]` → 미표시).
-    개요는 research.qmd 본문: 리드 문장(`.research-lead`) + 설명 2문장(`.research-intro`), 이어서 개요 그림.
+    개요는 research.qmd 본문: 리드 문장(`.page-lead`) + 설명 2문장(`.page-intro`), 이어서 개요 그림.
     BioArt 출처 문장도 research.qmd 본문. (front matter `description`은 서식을 못 넣어 쓰지 않음)
     그림 4개 모두 본문(문단) 폭 — 2026-10-19 사용자 요청으로 `.column-page` 해제.
     Research 페이지만 `date-modified: ""`로 수정일 숨김.
-  - `key_paper()`(제목 앞부분으로 publications.csv 검색)는 이제 methods.yml에서만 사용.
-  - `data/methods.yml` → methods.qmd (분야별 예시 이미지·설명·기법 목록(하위 항목 `{name, details}`)·대표 논문).
-    이미지는 `assets/methods/` (현재 R로 만든 모의 데이터 예시 → 실제 이미지로 교체)
+  - `data/methods.yml` → methods.qmd (2026-10-19 개편). yml에는 반복 데이터만: `data_cards`(6, 아이콘·제목·
+    태그{label, kind}·설명), `assay_cards`(4), `papers`(fini, computation). 섹션 제목·문단·그림·Models 목록은
+    methods.qmd에 직접 씀. 그림 `assets/methods/mt_*.webp`(본문 폭), 아이콘 `assets/methods/icons/`(장식용, `fig-alt=""`).
+    섹션 anchor: `#fini-seq`, `#data-we-generate`, `#models`, `#functional-assays`, `#computation`.
+    협력 기관·연구자 이름은 쓰지 않고 "Collaboration" 태그만 씀.
+  - Key papers 표기는 두 페이지 공통 함수 `paper_list()` (제목+DOI 링크, 다음 줄 "Author et al., **Journal**, Year").
   - `data/publications.csv` → publications.qmd (`key=TRUE`→Selected 탭, `topics`(;구분)→주제 탭,
     주제 목록·순서는 `R/site.R`의 `PUB_TOPICS`, 굵게 표시할 PI 이름은 `PI_NAME`)
   - `data/news.csv` → news.qmd 전체, index.qmd 최근 3건
@@ -62,7 +65,11 @@
     PI: Research interests·Employment·Education & Training·Awards / 구성원: Research interests·Education & Training·Awards·Fellowship.
     Awards는 한글로 작성. 사진은 컬러.
   - `photos/<행사종류>/YYYY-MM_설명.jpg` → photos.qmd (폴더=섹션, 최신순, lightbox)
-- `R/site.R` 페이지 공통 R 함수 (`show_pubs()`, `show_projects()`, `show_methods()`, `show_news()`, `show_collaborators()`, `show_photos()`)
+- `R/site.R` 페이지 공통 R 함수 (`show_pubs()`, `show_projects()`, `show_cards()`, `paper_list()`, `show_news()`, `show_collaborators()`, `show_photos()`)
+- `styles.scss` 공통 클래스 (Research·Models & Tools): `section.page-sec`(섹션 구분선), `.label-sm`(작은 대문자 라벨,
+  제목 안 `.kicker`는 머리말), `.paper-list`, `.box-card`(테두리 카드), `.tag` + `.tag-rna/-space/-protein/-metabolite/-house/-collab`,
+  `.page-lead`/`.page-intro`(페이지 도입 리드 문장 + 설명).
+  페이지 전용은 `.theme-*`(Research), `.mt-*`(Models & Tools).
 - `assets/` 로고, 홈 배너 배경(`hero-bg.jpg`), `team/` 구성원 사진, `projects/` 모식도
 - `docs/` = render 산출물
 

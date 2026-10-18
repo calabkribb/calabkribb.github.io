@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81d69204c3ec6a3caa64727865ee4c1f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6809d2401586796e6ee926a9798f0c82.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -139,12 +139,6 @@ ul.task-list li input[type="checkbox"] {
 
     
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 11, 2026</p>
-    </div>
-  </div>
     
   </div>
   
@@ -153,128 +147,166 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- 내용은 data/methods.yml에서 자동 생성. 대표 이미지는 assets/methods/에 넣고 methods.yml의 image에 경로를 적을 것 -->
-<p>Our lab combines <strong>bioinformatics</strong> with <strong>wet-lab experiments</strong>: we generate our own omics data from cell and mouse models, and analyze it mainly with established public packages, adding our own code and tools where needed.</p>
-<p><a href="#bioinformatics">Bioinformatics</a> · <a href="#omics">Omics Data Generation</a> · <a href="#molecular-biology">Molecular Biology</a> · <a href="#cell-culture">Cell Culture</a> · <a href="#animal-models">Animal Models</a></p>
-<div class="grid project method">
+<!-- 문단·그림은 이 파일에 직접 씀. 카드(Data we generate 6, Functional assays 4)와 Key papers는 data/methods.yml.
+     그림은 assets/methods/, 아이콘은 assets/methods/icons/. 그림은 본문 폭 (Research와 통일) -->
+<div class="page-lead">
+<p>Our lab combines bioinformatics with wet-lab experiments.</p>
+</div>
+<div class="page-intro">
+<p>Working in cell and mouse models, we generate single-cell, spatial and long-read data in our own lab and add protein and metabolite measurements through collaborations. We analyze them mainly with established public packages, writing our own code where needed.</p>
+</div>
+<p><a href="#fini-seq">FiNi-seq</a> · <a href="#data-we-generate">Data we generate</a> · <a href="#models">Models</a> · <a href="#functional-assays">Functional assays</a> · <a href="#computation">Computation</a></p>
+<section id="fini-seq" class="level2 page-sec">
+<h2 class="page-sec anchored" data-anchor-id="fini-seq"><span class="label-sm kicker">Signature method</span> FiNi-seq: Fibrotic Niche Enrichment Sequencing</h2>
+<p><img src="assets/methods/mt_fini.webp" class="img-fluid" alt="FiNi-seq workflow: an aged liver is digested and passed through a cell strainer; the flow-through goes to standard scRNA-seq, while retained chunks are digested again as the FiNi fraction; both are profiled by single-cell RNA and ATAC sequencing, and the FiNi fraction recovers niche cells — senescent-like endothelial cells, niche fibroblasts, scar-associated macrophages and exhausted-like T cells."></p>
+<div class="grid">
+<div class="g-col-12 g-col-md-7">
+<p><span class="label-sm">How it works</span></p>
+<p>Aged and fibrotic tissue resists enzymatic dissociation, so its niche cells stay on the cell strainer and are discarded in standard single-cell workflows. FiNi-seq collects these undissociated chunks, digests them again and profiles them by single-cell RNA and ATAC sequencing. In the aged mouse liver it recovers senescent-like endothelial cells, niche fibroblasts, scar-associated macrophages and exhausted-like T cells that standard scRNA-seq misses.</p>
+</div>
 <div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/methods/bioinformatics.png" class="img-fluid figure-img"></p>
-<figcaption>Example image: single-cell clustering (simulated data)</figcaption>
-</figure>
-</div>
-</div>
-<section id="bioinformatics" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="bioinformatics">Bioinformatics</h2>
-<p>We analyze bulk and single-cell multi-omics data mainly with established public packages in R and Python, and write our own code and tools where needed, with AI-assisted programming to speed up development.</p>
-<div class="techniques">
+<p><span class="label-sm">Key paper</span></p>
+<div class="paper-list">
 <ul>
-<li>R / Python programming (AI-assisted)</li>
-<li>Bulk and single-cell transcriptome / chromatin accessibility analysis</li>
-<li>Genome assembly and structural variant analysis</li>
+<li><a href="https://doi.org/10.1038/s43587-025-00857-7">Quasi-spatial single-cell transcriptome based on physical tissue properties defines early aging associated niche in liver</a><br>Tak et al., <strong>Nature Aging</strong>, 2025</li>
 </ul>
 </div>
-<p><strong>Key papers</strong></p>
-<div class="key-papers">
-<ul>
-<li><strong>GDBr: genomic signature interpretation tool for DNA double-strand break repair mechanisms</strong><br>
-<span class="meta">Ryu et al., <em>Nucleic Acids Research</em>, 2025</span></li>
-<li><strong>A beginner’s guide to assembling a draft genome and analyzing structural variants with long-read sequencing technologies</strong><br>
-<span class="meta">Kim et al., <em>STAR Protocols</em>, 2022</span></li>
-</ul>
+</div>
 </div>
 </section>
-</div>
-<div class="grid project method">
-<div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/methods/omics.png" class="img-fluid figure-img"></p>
-<figcaption>Example image: differential expression (simulated data)</figcaption>
-</figure>
-</div>
-</div>
-<section id="omics" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="omics">Omics Data Generation</h2>
-<p>We generate our own sequencing libraries, from bulk tissue to single cells and nuclei.</p>
-<div class="techniques">
-<ul>
-<li>Bulk RNA sequencing</li>
-<li>Bulk ATAC sequencing</li>
-<li>Single-cell (single-nucleus) RNA / ATAC sequencing
-<ul>
-<li>10x Genomics Chromium</li>
-<li>Single-cell combinatorial indexing</li>
-</ul></li>
-</ul>
-</div>
-</section>
-</div>
-<div class="grid project method">
-<div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/methods/molecular.png" class="img-fluid figure-img"></p>
-<figcaption>Example image: lentiviral vector map (schematic)</figcaption>
-</figure>
+<section id="data-we-generate" class="level2 page-sec">
+<h2 class="page-sec anchored" data-anchor-id="data-we-generate"><span class="label-sm kicker">Data layers</span> Data we generate</h2>
+<div class="mt-cards mt-cols-3">
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/singlecell.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Single-cell &amp; single-nucleus</span></p>
+<p><span class="tag tag-rna">RNA · Chromatin</span> <span class="tag tag-house">In-house</span></p>
+<p>scRNA-seq, snRNA-seq and scATAC-seq on 10x Genomics Chromium, and single-cell combinatorial indexing (sci) for scalable profiling.</p>
 </div>
 </div>
-<section id="molecular-biology" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="molecular-biology">Molecular Biology</h2>
-<p>We build genetic tools to perturb and track genes in cells. (draft)</p>
-<div class="techniques">
-<ul>
-<li>Cloning</li>
-<li>Lentivirus production</li>
-</ul>
-</div>
-</section>
-</div>
-<div class="grid project method">
-<div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/methods/cell-culture.png" class="img-fluid figure-img"></p>
-<figcaption>Example image: immunofluorescence of cultured cells (simulated)</figcaption>
-</figure>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/bulk.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Bulk sequencing</span></p>
+<p><span class="tag tag-rna">RNA · Chromatin</span> <span class="tag tag-house">In-house</span></p>
+<p>Bulk RNA-seq and ATAC-seq, sequenced on Illumina NovaSeq.</p>
 </div>
 </div>
-<section id="cell-culture" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="cell-culture">Cell Culture</h2>
-<p>We model aging and senescence in human and mouse cells. (draft)</p>
-<div class="techniques">
-<ul>
-<li>Human fibroblasts</li>
-<li>Human hepatic stellate cells</li>
-<li>Mouse hepatocytes</li>
-<li>Primary mouse cell culture</li>
-</ul>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/longread.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Long-read sequencing</span></p>
+<p><span class="tag tag-rna">RNA isoforms</span> <span class="tag tag-house">In-house</span></p>
+<p>Nanopore long-read sequencing (P2 Solo) to resolve RNA isoforms and alternative splicing, and genome structural variants.</p>
+</div>
+</div>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/spatial.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Spatial transcriptomics · Xenium</span></p>
+<p><span class="tag tag-space">Space</span> <span class="tag tag-house">In-house</span></p>
+<p>10x Genomics Xenium in situ imaging to place cell states in their tissue niche.</p>
+</div>
+</div>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/protein.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Proteomics</span></p>
+<p><span class="tag tag-protein">Protein</span> <span class="tag tag-collab">Collaboration</span></p>
+<p>Mass-spectrometry proteomics (LC-MS/MS) of tissues and niche fractions.</p>
+</div>
+</div>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/metabolite.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Metabolomics</span></p>
+<p><span class="tag tag-metabolite">Metabolite</span> <span class="tag tag-collab">Collaboration</span></p>
+<p>Metabolite profiling to follow metabolic rewiring with age.</p>
+</div>
+</div>
 </div>
 </section>
-</div>
-<div class="grid project method">
-<div class="g-col-12 g-col-md-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/methods/animal.png" class="img-fluid figure-img"></p>
-<figcaption>Example image: mouse liver phenotype (simulated data)</figcaption>
-</figure>
-</div>
-</div>
-<section id="animal-models" class="level2 g-col-12 g-col-md-7">
-<h2 class="anchored" data-anchor-id="animal-models">Animal Models</h2>
-<p>We compare young and aged mice and use genetic and disease models to test how aging shapes tissue function. (draft)</p>
-<div class="techniques">
+<section id="models" class="level2 page-sec">
+<h2 class="page-sec anchored" data-anchor-id="models"><span class="label-sm kicker">Model systems</span> Models</h2>
+<p><img src="assets/methods/mt_models.webp" class="img-fluid" alt="Model systems: in vitro, human fibroblasts, LX-2 stellate cells, mouse hepatocytes and FiNi-derived fibroblasts, with senescence induced by DNA damage or drugs; in vivo, young and aged mice, cKO, liver fibrosis and MASH diet models, and oncogenic RAS delivery to induce cell-type-specific senescence."></p>
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<p><strong>Cells</strong></p>
 <ul>
-<li>Mouse models: young and aged mice, conditional knockout (cKO) mice</li>
-<li>Mouse disease models: MASH, liver fibrosis</li>
+<li>Human fibroblasts, LX-2 human hepatic stellate cells, primary mouse hepatocytes, and fibroblasts grown from FiNi-seq chunks</li>
+<li>Senescence induced in vitro by DNA damage or drugs</li>
 </ul>
 </div>
+<div class="g-col-12 g-col-md-6">
+<p><strong>Mouse</strong></p>
+<ul>
+<li>Young and aged mice across age</li>
+<li>Conditional knockout (cKO) mice</li>
+<li>MASH diet and liver fibrosis models</li>
+<li>Oncogenic RAS delivery to induce cell-type-specific senescence</li>
+</ul>
+</div>
+</div>
 </section>
+<section id="functional-assays" class="level2 page-sec">
+<h2 class="page-sec anchored" data-anchor-id="functional-assays"><span class="label-sm kicker">Perturb &amp; validate</span> Functional assays</h2>
+<div class="mt-cards mt-cols-2">
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/screen.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Genetic screening</span></p>
+<p>CRISPR, CRISPRa and ORFeome screens to find factors that set or reverse the senescence fate.</p>
+</div>
+</div>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/molecular.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Molecular tools</span></p>
+<p>Cloning and lentiviral vectors to perturb and track genes.</p>
+</div>
+</div>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/readout.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Molecular assays</span></p>
+<p>Real-time PCR and Western blot to measure gene and protein expression.</p>
+</div>
+</div>
+<div class="box-card mt-card">
+<p><img src="assets/methods/icons/tissue.webp" class="mt-icon img-fluid" alt=""></p>
+<div class="mt-card-body">
+<p><span class="mt-card-title">Tissue validation</span></p>
+<p>Histology and immunofluorescence, RNA FISH (e.g.&nbsp;RNAscope) and telomere FISH to confirm cell states in tissue.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="computation" class="level2 page-sec">
+<h2 class="page-sec anchored" data-anchor-id="computation"><span class="label-sm kicker">Analysis</span> Computation</h2>
+<div class="grid">
+<div class="g-col-12 g-col-md-7">
+<div class="mt-flex">
+<p><img src="assets/methods/icons/compute.webp" class="mt-icon img-fluid" alt=""></p>
+<p>We analyze bulk, single-cell, spatial and long-read data in R and Python on in-house Ubuntu servers, using RStudio Server and Docker for reproducible environments, and reanalyze public aging atlases. We write our own code and tools where needed, with AI-assisted programming.</p>
+</div>
+</div>
+<div class="g-col-12 g-col-md-5">
+<p><span class="label-sm">Key papers</span></p>
+<div class="paper-list">
+<ul>
+<li><a href="https://doi.org/10.1093/nar/gkae1295">GDBr: genomic signature interpretation tool for DNA double-strand break repair mechanisms</a><br>Ryu et al., <strong>Nucleic Acids Research</strong>, 2025</li>
+<li><a href="https://doi.org/10.1016/j.xpro.2022.101506">A beginner’s guide to assembling a draft genome and analyzing structural variants with long-read sequencing technologies</a><br>Kim et al., <strong>STAR Protocols</strong>, 2022</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="figure-credit">
+<p>Illustrations adapted from the NIAID NIH BIOART Source (public domain).</p>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

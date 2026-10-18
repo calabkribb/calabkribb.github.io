@@ -67,15 +67,12 @@ show_news <- function(n = Inf) {
   for (i in seq_len(nrow(news))) cat("- **", news$date[i], "** — ", news$text[i], "\n", sep = "")
 }
 
-# ---- Key paper (Models & Tools 페이지용: data/methods.yml) ----
-# papers에는 publications.csv 논문 제목의 앞부분을 적음 → 제목·저자·저널을 자동으로 가져옴
-key_paper <- function(prefix, pubs) {
-  hit <- pubs[startsWith(tolower(pubs$title), tolower(prefix)), ]
-  if (nrow(hit) == 0) stop("methods.yml의 논문을 publications.csv에서 찾지 못함: ", prefix)
-  p <- hit[1, ]
-  first <- sub(",.*", "", p$authors)
-  title <- if (nzchar(p$doi)) paste0("[", p$title, "](https://doi.org/", p$doi, ")") else p$title
-  paste0("- **", title, "** \\\n  [", first, " et al., *", p$journal, "*, ", p$year, "]{.meta}\n")
+# ---- 공통: Key papers 목록 (Research, Models & Tools) ----
+# papers: list(title, authors, journal, year, doi). 제목은 일반 굵기 + DOI 링크, 다음 줄 "Author et al., **Journal**, Year"
+paper_list <- function(papers) {
+  items <- vapply(papers, function(p) paste0("- [", p$title, "](https://doi.org/", p$doi, ")<br>",
+                                             p$authors, ", **", p$journal, "**, ", p$year), "")
+  paste0("::: {.paper-list}\n", paste(items, collapse = "\n"), "\n:::\n\n")
 }
 
 # Research 페이지: 카드형 목차 → 주제마다 [번호+이름 → 핵심 질문 → 그림(본문 폭) → What we do | Key papers]
@@ -86,22 +83,18 @@ show_projects <- function() {
   cat("::: {.grid .theme-toc}\n\n")
   for (i in seq_along(projects)) {
     cat("::: {.g-col-4}\n[[", i, "]{.theme-num} ", projects[[i]]$title, "](#", projects[[i]]$id,
-        "){.theme-card}\n:::\n\n", sep = "")
+        "){.box-card}\n:::\n\n", sep = "")
   }
   cat(":::\n\n")
   for (i in seq_along(projects)) {
     pr <- projects[[i]]
-    cat("## [", i, "]{.theme-num} ", pr$title, " {#", pr$id, " .theme}\n\n", sep = "")
+    cat("## [", i, "]{.theme-num} ", pr$title, " {#", pr$id, " .page-sec}\n\n", sep = "")
     cat("::: {.theme-question}\n", pr$question, "\n:::\n\n", sep = "")
     cat("![](", pr$figure, "){fig-alt=\"", pr$alt, "\"}\n\n", sep = "")   # 그림은 본문 폭 (2026-10-19)
-    cat("::: {.grid}\n\n::: {.g-col-12 .g-col-md-7}\n[What we do]{.theme-label}\n\n", pr$what_we_do, "\n:::\n\n", sep = "")
-    cat("::: {.g-col-12 .g-col-md-5}\n[Key papers]{.theme-label}\n\n::: {.theme-papers}\n", sep = "")
-    for (p in pr$papers) {
-      cat("- [", p$title, "](https://doi.org/", p$doi, ")<br>", p$authors, ", **", p$journal, "**, ", p$year, "\n", sep = "")
-    }
-    cat(":::\n\n")
+    cat("::: {.grid}\n\n::: {.g-col-12 .g-col-md-7}\n[What we do]{.label-sm}\n\n", pr$what_we_do, "\n:::\n\n", sep = "")
+    cat("::: {.g-col-12 .g-col-md-5}\n[Key papers]{.label-sm}\n\n", paper_list(pr$papers), sep = "")
     if (length(pr$funding)) {
-      cat("[Funding]{.theme-label}\n\n")
+      cat("[Funding]{.label-sm}\n\n")
       for (f in pr$funding) cat("- ", f, "\n", sep = "")
       cat("\n")
     }
@@ -109,31 +102,19 @@ show_projects <- function() {
   }
 }
 
-# ---- Models & Tools (data/methods.yml) ----
-# 분야마다 왼쪽 예시 이미지, 오른쪽 설명·기법 목록·대표 논문
-show_methods <- function() {
-  methods <- yaml::read_yaml("data/methods.yml")
-  pubs <- read_pubs()
-  cat(paste0("[", vapply(methods, `[[`, "", "title"), "](#", vapply(methods, `[[`, "", "id"), ")",
-             collapse = " · "), "\n\n")
-  for (m in methods) {
-    cat("::: {.grid .project .method}\n\n")
-    cat("::: {.g-col-12 .g-col-md-5}\n![", m$caption, "](", m$image, ")\n:::\n\n", sep = "")
-    cat("::: {.g-col-12 .g-col-md-7}\n## ", m$title, " {#", m$id, "}\n\n", m$description, "\n\n", sep = "")
-    cat("::: {.techniques}\n")
-    for (it in m$items) {
-      if (is.character(it)) { cat("- ", it, "\n", sep = ""); next }
-      cat("- ", it$name, "\n", sep = "")
-      for (d in it$details) cat("    - ", d, "\n", sep = "")
-    }
-    cat(":::\n\n")
-    if (length(m$papers)) {
-      cat("**Key papers**\n\n::: {.key-papers}\n")
-      for (k in m$papers) cat(key_paper(k, pubs))
-      cat(":::\n\n")
-    }
-    cat(":::\n\n:::\n\n")
+# ---- Models & Tools 카드 (data/methods.yml의 data_cards / assay_cards) ----
+# 카드 = [아이콘 | 제목·태그·설명]. cols: 데스크톱 열 수 (3 = 3열·태블릿 2열·모바일 1열, 2 = 2열·모바일 1열)
+show_cards <- function(set, cols = 3) {
+  cards <- yaml::read_yaml("data/methods.yml")[[set]]
+  cat("::: {.mt-cards .mt-cols-", cols, "}\n\n", sep = "")
+  for (cd in cards) {
+    tags <- vapply(cd$tags, function(t) paste0("[", t$label, "]{.tag .tag-", t$kind, "}"), "")
+    cat("::: {.box-card .mt-card}\n![](assets/methods/icons/", cd$icon, ".webp){.mt-icon fig-alt=\"\"}\n\n",   # 장식용 아이콘: 빈 alt
+        "::: {.mt-card-body}\n", "[", cd$title, "]{.mt-card-title}\n\n",
+        if (length(tags)) paste0(paste(tags, collapse = " "), "\n\n") else "",
+        cd$text, "\n:::\n\n:::\n\n", sep = "")
   }
+  cat(":::\n")
 }
 
 # ---- Outreach: 강연 영상 (data/lectures.csv) ----

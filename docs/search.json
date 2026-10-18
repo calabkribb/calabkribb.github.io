@@ -263,42 +263,42 @@
     "href": "methods.html",
     "title": "Models & Tools",
     "section": "",
-    "text": "Our lab combines bioinformatics with wet-lab experiments: we generate our own omics data from cell and mouse models, and analyze it mainly with established public packages, adding our own code and tools where needed.\nBioinformatics · Omics Data Generation · Molecular Biology · Cell Culture · Animal Models"
+    "text": "Our lab combines bioinformatics with wet-lab experiments.\nFiNi-seq · Data we generate · Models · Functional assays · Computation"
   },
   {
-    "objectID": "methods.html#bioinformatics",
-    "href": "methods.html#bioinformatics",
+    "objectID": "methods.html#fini-seq",
+    "href": "methods.html#fini-seq",
     "title": "Models & Tools",
-    "section": "Bioinformatics",
-    "text": "Bioinformatics\nWe analyze bulk and single-cell multi-omics data mainly with established public packages in R and Python, and write our own code and tools where needed, with AI-assisted programming to speed up development.\n\n\nR / Python programming (AI-assisted)\nBulk and single-cell transcriptome / chromatin accessibility analysis\nGenome assembly and structural variant analysis\n\n\nKey papers\n\n\nGDBr: genomic signature interpretation tool for DNA double-strand break repair mechanisms\nRyu et al., Nucleic Acids Research, 2025\nA beginner’s guide to assembling a draft genome and analyzing structural variants with long-read sequencing technologies\nKim et al., STAR Protocols, 2022"
+    "section": "Signature method FiNi-seq: Fibrotic Niche Enrichment Sequencing",
+    "text": "Signature method FiNi-seq: Fibrotic Niche Enrichment Sequencing\n\n\n\nHow it works\nAged and fibrotic tissue resists enzymatic dissociation, so its niche cells stay on the cell strainer and are discarded in standard single-cell workflows. FiNi-seq collects these undissociated chunks, digests them again and profiles them by single-cell RNA and ATAC sequencing. In the aged mouse liver it recovers senescent-like endothelial cells, niche fibroblasts, scar-associated macrophages and exhausted-like T cells that standard scRNA-seq misses.\n\n\nKey paper\n\n\nQuasi-spatial single-cell transcriptome based on physical tissue properties defines early aging associated niche in liverTak et al., Nature Aging, 2025"
   },
   {
-    "objectID": "methods.html#omics",
-    "href": "methods.html#omics",
+    "objectID": "methods.html#data-we-generate",
+    "href": "methods.html#data-we-generate",
     "title": "Models & Tools",
-    "section": "Omics Data Generation",
-    "text": "Omics Data Generation\nWe generate our own sequencing libraries, from bulk tissue to single cells and nuclei.\n\n\nBulk RNA sequencing\nBulk ATAC sequencing\nSingle-cell (single-nucleus) RNA / ATAC sequencing\n\n10x Genomics Chromium\nSingle-cell combinatorial indexing"
+    "section": "Data layers Data we generate",
+    "text": "Data layers Data we generate\n\n\n\n\nSingle-cell & single-nucleus\nRNA · Chromatin In-house\nscRNA-seq, snRNA-seq and scATAC-seq on 10x Genomics Chromium, and single-cell combinatorial indexing (sci) for scalable profiling.\n\n\n\n\n\nBulk sequencing\nRNA · Chromatin In-house\nBulk RNA-seq and ATAC-seq, sequenced on Illumina NovaSeq.\n\n\n\n\n\nLong-read sequencing\nRNA isoforms In-house\nNanopore long-read sequencing (P2 Solo) to resolve RNA isoforms and alternative splicing, and genome structural variants.\n\n\n\n\n\nSpatial transcriptomics · Xenium\nSpace In-house\n10x Genomics Xenium in situ imaging to place cell states in their tissue niche.\n\n\n\n\n\nProteomics\nProtein Collaboration\nMass-spectrometry proteomics (LC-MS/MS) of tissues and niche fractions.\n\n\n\n\n\nMetabolomics\nMetabolite Collaboration\nMetabolite profiling to follow metabolic rewiring with age."
   },
   {
-    "objectID": "methods.html#molecular-biology",
-    "href": "methods.html#molecular-biology",
+    "objectID": "methods.html#models",
+    "href": "methods.html#models",
     "title": "Models & Tools",
-    "section": "Molecular Biology",
-    "text": "Molecular Biology\nWe build genetic tools to perturb and track genes in cells. (draft)\n\n\nCloning\nLentivirus production"
+    "section": "Model systems Models",
+    "text": "Model systems Models\n\n\n\nCells\n\nHuman fibroblasts, LX-2 human hepatic stellate cells, primary mouse hepatocytes, and fibroblasts grown from FiNi-seq chunks\nSenescence induced in vitro by DNA damage or drugs\n\n\n\nMouse\n\nYoung and aged mice across age\nConditional knockout (cKO) mice\nMASH diet and liver fibrosis models\nOncogenic RAS delivery to induce cell-type-specific senescence"
   },
   {
-    "objectID": "methods.html#cell-culture",
-    "href": "methods.html#cell-culture",
+    "objectID": "methods.html#functional-assays",
+    "href": "methods.html#functional-assays",
     "title": "Models & Tools",
-    "section": "Cell Culture",
-    "text": "Cell Culture\nWe model aging and senescence in human and mouse cells. (draft)\n\n\nHuman fibroblasts\nHuman hepatic stellate cells\nMouse hepatocytes\nPrimary mouse cell culture"
+    "section": "Perturb & validate Functional assays",
+    "text": "Perturb & validate Functional assays\n\n\n\n\nGenetic screening\nCRISPR, CRISPRa and ORFeome screens to find factors that set or reverse the senescence fate.\n\n\n\n\n\nMolecular tools\nCloning and lentiviral vectors to perturb and track genes.\n\n\n\n\n\nMolecular assays\nReal-time PCR and Western blot to measure gene and protein expression.\n\n\n\n\n\nTissue validation\nHistology and immunofluorescence, RNA FISH (e.g. RNAscope) and telomere FISH to confirm cell states in tissue."
   },
   {
-    "objectID": "methods.html#animal-models",
-    "href": "methods.html#animal-models",
+    "objectID": "methods.html#computation",
+    "href": "methods.html#computation",
     "title": "Models & Tools",
-    "section": "Animal Models",
-    "text": "Animal Models\nWe compare young and aged mice and use genetic and disease models to test how aging shapes tissue function. (draft)\n\n\nMouse models: young and aged mice, conditional knockout (cKO) mice\nMouse disease models: MASH, liver fibrosis"
+    "section": "Analysis Computation",
+    "text": "Analysis Computation\n\n\n\n\nWe analyze bulk, single-cell, spatial and long-read data in R and Python on in-house Ubuntu servers, using RStudio Server and Docker for reproducible environments, and reanalyze public aging atlases. We write our own code and tools where needed, with AI-assisted programming.\n\n\n\nKey papers\n\n\nGDBr: genomic signature interpretation tool for DNA double-strand break repair mechanismsRyu et al., Nucleic Acids Research, 2025\nA beginner’s guide to assembling a draft genome and analyzing structural variants with long-read sequencing technologiesKim et al., STAR Protocols, 2022\n\n\n\n\n\nIllustrations adapted from the NIAID NIH BIOART Source (public domain)."
   },
   {
     "objectID": "team/juyeon-kim.html",

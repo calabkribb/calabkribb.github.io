@@ -1,68 +1,65 @@
-# Models & Tools 페이지 데이터. 위에서부터 순서대로 표시됨.
-# image: 대표 분석 이미지 (assets/methods/). 현재는 R로 만든 예시 이미지(모의 데이터) → 실제 이미지로 교체
-# items: 기법 목록. 하위 항목이 있으면 {name: ..., details: [...]} 형식
-# papers: (선택) publications.csv 논문 제목의 앞부분 → 제목·첫 저자·저널·연도 자동 표시
+# Models & Tools 페이지의 반복 데이터 (R/site.R의 show_cards(), paper_list()가 읽음).
+# 섹션 제목·문단·그림은 methods.qmd에 직접 씀.
+# icon: assets/methods/icons/<이름>.webp (장식용, alt 없음)
+# tags: label(화면 글자)과 kind(색). kind = rna, space, protein, metabolite, house, collab
+#       (색은 Research 그림의 데이터 층 색과 맞춤. 협력 기관·연구자 이름은 쓰지 않음)
+# papers: 서지정보는 PubMed 기준 (PMID 40325195, 39797734, 35776635). 제목 끝 마침표 없음
 
-- id: bioinformatics
-  title: "Bioinformatics"
-  description: >
-    We analyze bulk and single-cell multi-omics data mainly with established public
-    packages in R and Python, and write our own code and tools where needed,
-    with AI-assisted programming to speed up development.
-  image: assets/methods/bioinformatics.png
-  caption: "Example image: single-cell clustering (simulated data)"
-  items:
-    - "R / Python programming (AI-assisted)"
-    - "Bulk and single-cell transcriptome / chromatin accessibility analysis"
-    - "Genome assembly and structural variant analysis"
-  papers:
-    - "GDBr: genomic signature interpretation tool"
-    - "A beginner's guide to assembling a draft genome"
+data_cards:
+  - icon: singlecell
+    title: "Single-cell & single-nucleus"
+    tags: [{label: "RNA · Chromatin", kind: rna}, {label: "In-house", kind: house}]
+    text: "scRNA-seq, snRNA-seq and scATAC-seq on 10x Genomics Chromium, and single-cell combinatorial indexing (sci) for scalable profiling."
+  - icon: bulk
+    title: "Bulk sequencing"
+    tags: [{label: "RNA · Chromatin", kind: rna}, {label: "In-house", kind: house}]
+    text: "Bulk RNA-seq and ATAC-seq, sequenced on Illumina NovaSeq."
+  - icon: longread
+    title: "Long-read sequencing"
+    tags: [{label: "RNA isoforms", kind: rna}, {label: "In-house", kind: house}]
+    text: "Nanopore long-read sequencing (P2 Solo) to resolve RNA isoforms and alternative splicing, and genome structural variants."
+  - icon: spatial
+    title: "Spatial transcriptomics · Xenium"
+    tags: [{label: "Space", kind: space}, {label: "In-house", kind: house}]
+    text: "10x Genomics Xenium in situ imaging to place cell states in their tissue niche."
+  - icon: protein
+    title: "Proteomics"
+    tags: [{label: "Protein", kind: protein}, {label: "Collaboration", kind: collab}]
+    text: "Mass-spectrometry proteomics (LC-MS/MS) of tissues and niche fractions."
+  - icon: metabolite
+    title: "Metabolomics"
+    tags: [{label: "Metabolite", kind: metabolite}, {label: "Collaboration", kind: collab}]
+    text: "Metabolite profiling to follow metabolic rewiring with age."
 
-- id: omics
-  title: "Omics Data Generation"
-  description: >
-    We generate our own sequencing libraries, from bulk tissue to single cells
-    and nuclei.
-  image: assets/methods/omics.png
-  caption: "Example image: differential expression (simulated data)"
-  items:
-    - "Bulk RNA sequencing"
-    - "Bulk ATAC sequencing"
-    - name: "Single-cell (single-nucleus) RNA / ATAC sequencing"
-      details:
-        - "10x Genomics Chromium"
-        - "Single-cell combinatorial indexing"
+assay_cards:
+  - icon: screen
+    title: "Genetic screening"
+    text: "CRISPR, CRISPRa and ORFeome screens to find factors that set or reverse the senescence fate."
+  - icon: molecular
+    title: "Molecular tools"
+    text: "Cloning and lentiviral vectors to perturb and track genes."
+  - icon: readout
+    title: "Molecular assays"
+    text: "Real-time PCR and Western blot to measure gene and protein expression."
+  - icon: tissue
+    title: "Tissue validation"
+    text: "Histology and immunofluorescence, RNA FISH (e.g. RNAscope) and telomere FISH to confirm cell states in tissue."
 
-- id: molecular-biology
-  title: "Molecular Biology"
-  description: >
-    We build genetic tools to perturb and track genes in cells. (draft)
-  image: assets/methods/molecular.png
-  caption: "Example image: lentiviral vector map (schematic)"
-  items:
-    - "Cloning"
-    - "Lentivirus production"
-
-- id: cell-culture
-  title: "Cell Culture"
-  description: >
-    We model aging and senescence in human and mouse cells. (draft)
-  image: assets/methods/cell-culture.png
-  caption: "Example image: immunofluorescence of cultured cells (simulated)"
-  items:
-    - "Human fibroblasts"
-    - "Human hepatic stellate cells"
-    - "Mouse hepatocytes"
-    - "Primary mouse cell culture"
-
-- id: animal-models
-  title: "Animal Models"
-  description: >
-    We compare young and aged mice and use genetic and disease models to test
-    how aging shapes tissue function. (draft)
-  image: assets/methods/animal.png
-  caption: "Example image: mouse liver phenotype (simulated data)"
-  items:
-    - "Mouse models: young and aged mice, conditional knockout (cKO) mice"
-    - "Mouse disease models: MASH, liver fibrosis"
+papers:
+  fini:
+    - title: "Quasi-spatial single-cell transcriptome based on physical tissue properties defines early aging associated niche in liver"
+      authors: "Tak et al."
+      journal: "Nature Aging"
+      year: 2025
+      doi: "10.1038/s43587-025-00857-7"
+  computation:
+    - title: "GDBr: genomic signature interpretation tool for DNA double-strand break repair mechanisms"
+      authors: "Ryu et al."
+      journal: "Nucleic Acids Research"
+      year: 2025
+      doi: "10.1093/nar/gkae1295"
+    - title: "A beginner's guide to assembling a draft genome and analyzing structural variants with long-read sequencing technologies"
+      authors: "Kim et al."
+      journal: "STAR Protocols"
+      year: 2022
+      doi: "10.1016/j.xpro.2022.101506"
