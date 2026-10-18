@@ -1,11 +1,19 @@
 ---
 title: "Research"
-description: "We see aging as the accumulated residue of tissue repairs that were never completed. Damage that is not fully resolved leaves behind local niches — altered matrix, persistent senescent cells and failing regeneration — that arise at different times in different organs and reinforce themselves once formed. This makes aging a non-linear, mosaic process. We follow it from the niches where it begins, to the fate decisions of the cells within them, to the diseases they seed."
 date-modified: ""   # 이 페이지만 최종 수정일 표시 안 함 (사이트 전체 설정은 _quarto.yml)
 ---
 
 <!-- 세 주제(목차 카드·질문·그림·What we do·Key papers)는 data/projects.yml에서 자동 생성.
      그림은 assets/research/. 맨 아래 출처 문장은 그림에 쓴 NIAID BioArt 소재 표기 -->
+
+<!-- 개요: 첫 문장은 리드(크고 굵게), 나머지는 보통 크기. 서식을 넣기 위해 description이 아닌 본문에 씀 -->
+::: {.research-lead}
+We study why tissues age unevenly.
+:::
+
+::: {.research-intro}
+Damage that is never fully repaired leaves behind small aging niches, making aging a non-linear, mosaic process. We follow these niches, the cells that change fate inside them, and the diseases they lead to.
+:::
 
 ![](assets/research/research_overview.webp){fig-alt="Overview of our research: human bodies become mosaic with age; zooming into an aged liver reveals a senescent niche; inside one cell of that niche, chromatin and RNA isoforms, protein signaling and metabolic rewiring lead to one of seven fates, and these fates feed back on the tissue."}
 

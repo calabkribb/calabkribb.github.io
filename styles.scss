@@ -123,6 +123,13 @@ section.theme > h2 { border-top: 1px solid #dfe3e6; border-bottom: none; padding
 }
 .theme-papers li { margin-bottom: 0.7rem; }
 .figure-credit { margin-top: 3rem; font-size: 0.85rem; color: #5b6770; }
+// 개요: 리드 문장(크고 굵게) + 보통 크기 설명 2문장, 그 아래 개요 그림
+.research-lead { font-size: 1.6rem; font-weight: 600; line-height: 1.3; color: $primary; margin-bottom: 0.6rem; }
+.research-intro { font-size: 1.1rem; color: #3d4a52; margin-bottom: 1.5rem; }
+@media (max-width: 767.98px) {
+  .research-lead { font-size: 1.35rem; }
+  .research-intro { font-size: 1rem; }
+}
 
 // Models & Tools 분야별 카드: 왼쪽 예시 이미지, 오른쪽 설명 (Research와 같은 구분선 사용)
 .method img { border: 1px solid #e5e8eb; }

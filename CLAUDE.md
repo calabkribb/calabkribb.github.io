@@ -46,7 +46,8 @@
     From fate to disease (anchor `#aging-environments`, `#cell-fate-decisions`, `#fate-to-disease`).
     필드: `question`, `what_we_do`, `figure`·`alt`(`assets/research/`), `papers`(title·authors·journal·year·doi를
     직접 기입, PubMed 제목 기준. publications.csv와 연결 안 함), `funding`(과제번호 확정 전에는 `[]` → 미표시).
-    개요 문단은 research.qmd의 `description`, 개요 그림·BioArt 출처 문장은 research.qmd 본문.
+    개요는 research.qmd 본문: 리드 문장(`.research-lead`) + 설명 2문장(`.research-intro`), 이어서 개요 그림.
+    BioArt 출처 문장도 research.qmd 본문. (front matter `description`은 서식을 못 넣어 쓰지 않음)
     그림 4개 모두 본문(문단) 폭 — 2026-10-19 사용자 요청으로 `.column-page` 해제.
     Research 페이지만 `date-modified: ""`로 수정일 숨김.
   - `key_paper()`(제목 앞부분으로 publications.csv 검색)는 이제 methods.yml에서만 사용.
