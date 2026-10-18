@@ -12,8 +12,7 @@ source("R/site.R")
 ::: {.hero}
 # Cellular Agenomics Lab
 
-We study how cellular senescence and aging microenvironments drive tissue decline
-and age-related disease, using single-cell and spatial multi-omics. (draft)
+How do cells decide their fate in an aging tissue? We integrate RNA, protein and metabolite data to read how each cell senses its environment, and which environments push it toward aging.
 
 [Our research](research.qmd){.btn .btn-light}
 :::
@@ -23,10 +22,7 @@ and age-related disease, using single-cell and spatial multi-omics. (draft)
 ::: {.g-col-12 .g-col-md-7}
 ## About the lab
 
-(3–4 sentences on the big questions the lab is asking — to be written.)
-
-Established in 2020, the lab is part of the Aging Convergence Research Center at the
-Korea Research Institute of Bioscience and Biotechnology (KRIBB), Daejeon, Korea.
+Founded in 2020, the Cellular Agenomics Lab is a basic-science laboratory that seeks a deep understanding of why and how mammals age. We combine cell biology, genetics and bioinformatics to understand the cellular basis of aging.
 
 [We are recruiting →](join.qmd)
 :::
@@ -37,7 +33,7 @@ Korea Research Institute of Bioscience and Biotechnology (KRIBB), Daejeon, Korea
 ```{r}
 #| echo: false
 #| results: asis
-show_news(3)
+show_news(2)
 ```
 
 [All news →](news.qmd)
