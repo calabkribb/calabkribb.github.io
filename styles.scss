@@ -5,6 +5,10 @@ $navbar-bg: #ffffff;
 $navbar-fg: #193747;
 $navbar-hl: #1f6f8b;
 
+// 페이지 폭: Quarto는 본문 최대 폭을 $grid-body-width(기본 800px)로 정하고 page-layout: full에서도 상한으로 씀.
+// 2026-10-26: 여백 버전 B 채택 — 상한 1200px (2000px 화면에서 양옆 약 225px, 1440px 화면에서는 거의 꽉 참)
+$grid-body-width: 1200px;
+
 // 글꼴: 한글·영문을 같은 글꼴로 통일 (Noto Sans KR은 한글과 라틴 문자를 모두 포함).
 // cosmo 테마 기본값(Source Sans Pro)은 한글이 없어 한글만 시스템 글꼴로 바뀌어 보였음.
 $web-font-path: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap";
@@ -69,6 +73,14 @@ $font-family-sans-serif: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "App
 #listing-members .card-body { padding: 0.6rem 0 1rem 0; }
 #listing-members .card-title { font-size: 1.05rem; margin-bottom: 0.1rem; }
 #listing-members .card-subtitle { font-size: 0.9rem; color: #5b6770; }
+// 한 줄 인원: 데스크톱(992px 이상) 5명, 태블릿(576~991px) 3명, 휴대폰 2명 (아래 규칙)
+@media (min-width: 576px) {
+  #listing-members .list.grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  #listing-members .list.grid > * { grid-column: auto !important; }
+}
+@media (min-width: 992px) {
+  #listing-members .list.grid { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+}
 // 휴대폰 화면에서는 한 줄에 1명 대신 2명씩 (사진이 화면을 가득 채우지 않도록)
 @media (max-width: 575.98px) {
   #listing-members .list.grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }

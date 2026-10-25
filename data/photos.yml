@@ -3,36 +3,36 @@
 # 여기에 없는 폴더는 폴더 이름(하이픈 → 띄어쓰기)으로 제목을 만듦. captions는 선택 (파일 이름: 설명)
 # 사진은 올리기 전에 EXIF(위치정보)를 반드시 제거할 것 (CLAUDE.md 구성원 사진 규칙과 동일)
 
-2023-03-29_cherry-blossom: {title: "Cherry blossom outing"}
-2023-03-30_acrc-workshop-yeosu: {title: "Aging Convergence Research Center workshop, Yeosu"}
-2023-05-15_teachers-day: {title: "Teacher's Day event, KRIBB School"}
+2023-03-29_cherry-blossom: {title: "CA랩 벚꽃놀이"}
+2023-03-30_acrc-workshop-yeosu: {title: "노화융합연구단 워크숍 (여수)"}
+2023-05-15_teachers-day: {title: "KRIBB School 스승의날 행사"}
 2024-05-29_a3-busan:
-  title: "A3 Foresight Meeting, Busan"
+  title: "A3 Foresight Meeting (부산)"
   captions: {"04.jpg": "국제교류"}
-2024-10-09_bomunsan-hike: {title: "Lab hike, Bomunsan"}
-2025-01-17_kbs-filming: {title: "Filming for KBS Docu Insight"}
+2024-10-09_bomunsan-hike: {title: "CA랩 보문산 등산"}
+2025-01-17_kbs-filming: {title: "KBS 다큐인사이트 촬영"}
 2025-01-29_promotion:
-  title: "Celebrating Chuna Kim's promotion"
+  title: "박사님 승진 축하"
   captions: {"01.jpg": "해피박사님"}
 2025-02-05_kogo-winter:
-  title: "KOGO Winter Symposium, Hongcheon"
+  title: "한국유전체학회(KOGO) 동계 학회 (홍천)"
   captions: {"01.jpg": "야간스키"}
-2025-08-25_ardd-denmark: {title: "ARDD meeting, Denmark"}
+2025-08-25_ardd-denmark: {title: "ARDD(Aging Research & Drug Discovery) 학회 (덴마크)"}
 2025-10-28_synergy-seoul:
-  title: "Synergy Lab Network Seminar, Seoul"
+  title: "시너지랩 네트워크 세미나 (서울)"
   captions: {"01.jpg": "서울대"}
-2025-12-17_synergy-icheon: {title: "Synergy Lab Network Workshop, Icheon"}
+2025-12-17_synergy-icheon: {title: "시너지랩 네트워크 워크숍 (이천)"}
 2026-01-24_a3-okinawa:
-  title: "A3 Foresight Meeting, Okinawa"
+  title: "A3 Foresight Meeting (오키나와)"
   captions: {"04.jpg": "노벨상 수상자 동상을 보며 영감을 받는 박사님"}
-2026-01-29_kribb-award: {title: "KRIBB Excellence in Innovation Award"}
-2026-04-06_cherry-blossom: {title: "Cherry blossom outing"}
+2026-01-29_kribb-award: {title: "KRIBB 우수혁신상 수상"}
+2026-04-06_cherry-blossom: {title: "CA랩 벚꽃놀이"}
 2026-05-14_teachers-day-dinner:
-  title: "Teacher's Day lab dinner"
+  title: "CA랩 스승의 날 회식"
   captions: {"01.jpg": "회식 후 막내들 찍어주는 이모삼촌"}
 2026-05-18_lesson: {title: "박사님의 참교육"}
 2026-05-27_ksbmb-busan:
-  title: "KSBMB meeting, Busan"
+  title: "생화학분자생물학회(KSBMB) (부산)"
   captions: {"03.jpg": "인생네컷"}
-2026-10-10_bbangbbang-run: {title: "Bbangbbang Run"}
-2026-10-18_daecheongho-marathon: {title: "Daecheongho Marathon"}
+2026-10-10_bbangbbang-run: {title: "빵빵런 마라톤"}
+2026-10-18_daecheongho-marathon: {title: "대청호 마라톤"}

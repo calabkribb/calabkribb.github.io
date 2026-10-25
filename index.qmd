@@ -19,7 +19,7 @@ How do cells decide their fate in an aging tissue? We integrate RNA, protein and
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-7}
+::: {.g-col-12 .g-col-md-6}
 ## About the lab
 
 Founded in 2020, the Cellular Agenomics Lab is a basic-science laboratory that seeks a deep understanding of why and how mammals age. We combine cell biology, genetics and bioinformatics to understand the cellular basis of aging.
@@ -27,13 +27,13 @@ Founded in 2020, the Cellular Agenomics Lab is a basic-science laboratory that s
 [We are recruiting →](join.qmd)
 :::
 
-::: {.g-col-12 .g-col-md-5}
+::: {.g-col-12 .g-col-md-6}
 ## Latest news
 
 ```{r}
 #| echo: false
 #| results: asis
-show_news(2)
+show_news(4)
 ```
 
 [All news →](news.qmd)

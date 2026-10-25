@@ -44,3 +44,4 @@ format:
   html:
     theme: [cosmo, styles.scss]
     toc: false
+    page-layout: full   # 모든 페이지 양옆 여백 없이 전체 폭 사용 (2026-10-26)
