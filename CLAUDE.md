@@ -72,7 +72,7 @@
   - `photos/<YYYY-MM-DD>_<이름>/01.jpg …` → photos.qmd (2026-10-25 개편). 폴더 하나 = 이벤트 하나, 연도 → 이벤트 최신순.
     제목·사진 설명은 `data/photos.yml`(폴더 이름 → title, captions). 목록은 3열(휴대폰 2열)·4:3 크롭, 누르면 lightbox.
     날짜는 사진 파일 날짜 기준. 올리기 전에 EXIF 제거·회전 처리, 긴 변 1600px 이하.
-  - `data/news.csv`(date, text): News 페이지는 연도별 소제목(`show_news(by_year = TRUE)`), Home은 최근 4건.
+  - `data/news.csv`(date, text): News 페이지는 연도별 소제목(`show_news(by_year = TRUE)`), Home은 최근 5건.
 - `R/site.R` 페이지 공통 R 함수 (`show_pubs()`, `show_projects()`, `show_cards()`, `paper_list()`, `show_news()`, `show_collaborators()`, `show_photos()`)
 - `styles.scss` 공통 클래스 (Research·Models & Tools): `section.page-sec`(섹션 구분선), `.label-sm`(작은 대문자 라벨,
   제목 안 `.kicker`는 머리말), `.paper-list`, `.box-card`(테두리 카드), `.tag` + `.tag-rna/-space/-protein/-metabolite/-house/-collab`,
@@ -141,6 +141,6 @@
 - (2026-10-26) **페이지 폭**: `_quarto.yml`의 `page-layout: full` + `styles.scss`의 `$grid-body-width: 1200px`
   (Quarto는 full 배치에서도 본문 최대 폭을 이 변수로 제한함). 여백 비교 캡처 4종 중 B안 채택 (2000px 화면에서 양옆 약 225px).
   Team 구성원 목록: 한 줄 5명(992px 이상) / 3명(태블릿) / 2명(휴대폰).
-- Home: About 6/12 · Latest news 6/12, 최근 소식 4건 (`show_news(4)`).
+- Home: About 6/12 · Latest news 6/12, 최근 소식 5건 (`show_news(5)`).
 - Join us(한국어): 도입 리드 → 연구실 문화(호기심 / Team Chemistry / 소통 카드) → 모집 분야(박사과정·박사후연구원, 인원 표기 없음)
   → 입학 방법(UST, 학연과정) → 지원 방법. 방문자 지도 위젯은 넣지 않기로 함 (외부 계정·방문자 추적 문제).

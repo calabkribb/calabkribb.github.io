@@ -9,7 +9,7 @@ title-block-style: none   # 제목을 목록과 같은 넓은 폭에 두기 위�
 ::: {.column-page}
 # Publications {.title}
 
-\* co-first author, \# co-corresponding author. Lab members are shown in bold.
+\* co-first author, \# co-corresponding author. Current and former lab members are shown in bold.
 
 ```{r}
 #| echo: false

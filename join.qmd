@@ -13,19 +13,19 @@ lang: ko        # 이 페이지만 한국어 (사이트 기본은 영어)
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-4 .box-card}
+::: {.g-col-12 .g-col-md-4 .box-card .join-card}
 [호기심]{.join-value}
 
-스스로 질문하고 공부하며, 노화 분야의 전문가로 성장해 가는 연구실
+스스로 질문하고 공부하는 자기 주도적인 연구자
 :::
 
-::: {.g-col-12 .g-col-md-4 .box-card}
+::: {.g-col-12 .g-col-md-4 .box-card .join-card}
 [Team Chemistry]{.join-value}
 
-연구는 혼자 할 수 없습니다. 모든 구성원이 서로에게 힘이 되는 호혜적인 연구실
+모든 구성원이 서로에게 힘이 되는 호혜적인 연구실
 :::
 
-::: {.g-col-12 .g-col-md-4 .box-card}
+::: {.g-col-12 .g-col-md-4 .box-card .join-card}
 [소통]{.join-value}
 
 PI, 다른 구성원, 공동연구자와 적극적으로 소통하는 연구실

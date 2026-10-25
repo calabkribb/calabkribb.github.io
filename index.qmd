@@ -12,7 +12,7 @@ source("R/site.R")
 ::: {.hero}
 # Cellular Agenomics Lab
 
-How do cells decide their fate in an aging tissue? We integrate RNA, protein and metabolite data to read how each cell senses its environment, and which environments push it toward aging.
+How do cells decide their fate in an aging tissue? We integrate epigenetic, RNA, protein and metabolite data to read how each cell senses its environment, how it remembers past damage, and which environments push it toward aging.
 
 [Our research](research.qmd){.btn .btn-light}
 :::
@@ -33,7 +33,7 @@ Founded in 2020, the Cellular Agenomics Lab is a basic-science laboratory that s
 ```{r}
 #| echo: false
 #| results: asis
-show_news(4)
+show_news(5)
 ```
 
 [All news →](news.qmd)

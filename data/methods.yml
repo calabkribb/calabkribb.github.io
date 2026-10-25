@@ -7,9 +7,9 @@
 
 data_cards:
   - icon: singlecell
-    title: "Single-cell & single-nucleus"
+    title: "Single-cell multi omics"
     tags: [{label: "RNA · Chromatin", kind: rna}, {label: "In-house", kind: house}]
-    text: "scRNA-seq, snRNA-seq and scATAC-seq on 10x Genomics Chromium, and single-cell combinatorial indexing (sci) for scalable profiling."
+    text: "scRNA-seq and scATAC-seq on 10x Genomics Chromium, and single-cell combinatorial indexing for scalable profiling."
   - icon: bulk
     title: "Bulk sequencing"
     tags: [{label: "RNA · Chromatin", kind: rna}, {label: "In-house", kind: house}]

@@ -196,6 +196,8 @@ img.mt-icon { width: 56px; height: 56px; }
 
 // ==== Join us (join.qmd) : 연구실 문화 카드 3장 ====
 .join-value { display: block; font-size: 1.1rem; font-weight: 600; color: $primary; margin-bottom: 0.4rem; }
+// 카드 설명은 한 줄에 들어가도록 조금 작게 (1440px 화면에서 세 카드 모두 한 줄. 1280px 이하·휴대폰에서는 2줄이 될 수 있음)
+.join-card p:not(:first-child) { font-size: 0.95rem; }
 .box-card p:last-child { margin-bottom: 0; }
 
 // Outreach 강연 카드: YouTube 썸네일(hqdefault, 4:3 위아래 검은 띠 포함)을 16:9로 잘라 띠 제거
