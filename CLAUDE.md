@@ -141,6 +141,7 @@
 - (2026-10-26) **페이지 폭**: `_quarto.yml`의 `page-layout: full` + `styles.scss`의 `$grid-body-width: 1200px`
   (Quarto는 full 배치에서도 본문 최대 폭을 이 변수로 제한함). 여백 비교 캡처 4종 중 B안 채택 (2000px 화면에서 양옆 약 225px).
   Team 구성원 목록: 한 줄 5명(992px 이상) / 3명(태블릿) / 2명(휴대폰).
-- Home: About 6/12 · Latest news 6/12, 최근 소식 5건 (`show_news(5)`).
+- Home: About 6/12 · Latest news 6/12, 최근 소식 5건 (`show_news(5)`). 배너 안쪽 여백 2.5rem, Home 전용 여백 축소 규칙
+  (`body:has(.hero)`)으로 1440×900에서 스크롤 없이 전체가 보임 (여백 2안, 2026-10-26).
 - Join us(한국어): 도입 리드 → 연구실 문화(호기심 / Team Chemistry / 소통 카드) → 모집 분야(박사과정·박사후연구원, 인원 표기 없음)
   → 입학 방법(UST, 학연과정) → 지원 방법. 방문자 지도 위젯은 넣지 않기로 함 (외부 계정·방문자 추적 문제).
