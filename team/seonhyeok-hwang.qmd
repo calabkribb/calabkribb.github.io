@@ -1,7 +1,7 @@
 ---
 title: "Seonhyeok Hwang"
-subtitle: "Integrated M.S./Ph.D. Student"
-image: ../assets/team/placeholder.png   # 사진: ../assets/team/seonhyeok-hwang.jpg (3:4 세로)
+subtitle: "Researcher"
+image: ../assets/team/seonhyeok-hwang.jpg
 order: 7
 about:
   template: trestles
@@ -9,18 +9,16 @@ about:
   image-width: 14em
 ---
 
-**Research interests** — One or two lines on research interests. (to be written)
+**Research interests** — Cellular senescence · Cell dynamics in aging · Inflammaging · Functional genomics (CRISPR, ORF screens) · Combinatorial-indexing based single-nucleus transcriptomics and chromatin accessibility
 
 ## Education & Training
 
-- YYYY–present &nbsp; Position, Department, Institution
-- YYYY–YYYY &nbsp; M.Sc., Department, Institution
-- YYYY–YYYY &nbsp; B.Sc., Department, Institution
+- 2026–present &nbsp; Researcher, Aging Convergence Research Center, KRIBB
+- 2024–2026 &nbsp; M.S., Bioinformatics Convergence, KRIBB–Chungnam National University Cooperative Program
+- 2023 &nbsp; Research Intern, Aging Convergence Research Unit, KRIBB
+- 2016–2023 &nbsp; B.S., Life Science, Kongju National University
 
 ## Awards
 
-- YYYY &nbsp; 수상명 (수여 기관)
-
-## Fellowship
-
-- YYYY–YYYY &nbsp; Fellowship name
+- 2025 &nbsp; Outstanding Poster Award (Korea Genome Organization, KOGO)
+- 2022 &nbsp; Outstanding Poster Award (The Korean Society for Integrative Biology)

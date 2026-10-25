@@ -1,0 +1,31 @@
+---
+title: "Woojin Sim"
+subtitle: "Postdoctoral Researcher"
+image: ../assets/team/woojin-sim.jpg
+order: 3
+about:
+  template: trestles
+  image-shape: rectangle
+  image-width: 14em
+---
+
+**Research interests** — My research aims to elucidate how ovarian aging drives systemic aging in females, through multi-omics approaches and atlas construction to map the underlying molecular landscape.
+
+## Education & Training
+
+- 2026–present &nbsp; Postdoctoral Researcher, Aging Convergence Research Center, Korea Research Institute of Bioscience and Biotechnology (KRIBB)
+- 2021–2026 &nbsp; Ph.D. Student, Department of Food and Biotechnology, Sejong University, Seoul, Korea
+- 2015–2021 &nbsp; B.S. in Food Engineering, Hoseo University, Asan, Korea
+
+## Awards
+
+- 2024 &nbsp; Haerang Outstanding Young Scientist Award (Korea Society of Toxicogenomics and Toxicoproteomics)
+- 2024 &nbsp; Encouragement Award (Korea Society of Toxicogenomics and Toxicoproteomics)
+- 2024 &nbsp; Graduate Student Oral Competition Award (Korean Society of Food Science and Technology)
+- 2022 &nbsp; Best Poster Presentation Award (The Korean Society of Food Science and Nutrition)
+- 2022 &nbsp; Best Paper Presentation Award (International Conference on Toxicogenomics)
+- 2019 &nbsp; Poster Competition Award (Korean Society of Food Science and Technology)
+
+## Fellowship
+
+- 2024–2026 &nbsp; Ph.D. Fellowship

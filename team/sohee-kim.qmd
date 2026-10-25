@@ -1,7 +1,7 @@
 ---
 title: "Sohee Kim"
 subtitle: "Integrated M.S./Ph.D. Student"
-image: ../assets/team/placeholder.png   # 사진: ../assets/team/sohee-kim.jpg (3:4 세로)
+image: ../assets/team/sohee-kim.jpg
 order: 4
 about:
   template: trestles
@@ -9,18 +9,9 @@ about:
   image-width: 14em
 ---
 
-**Research interests** — One or two lines on research interests. (to be written)
+**Research interests** — Aging · Senescence · Cell fate
 
 ## Education & Training
 
-- YYYY–present &nbsp; Position, Department, Institution
-- YYYY–YYYY &nbsp; M.Sc., Department, Institution
-- YYYY–YYYY &nbsp; B.Sc., Department, Institution
-
-## Awards
-
-- YYYY &nbsp; 수상명 (수여 기관)
-
-## Fellowship
-
-- YYYY–YYYY &nbsp; Fellowship name
+- 2021–present &nbsp; Integrated M.S./Ph.D. Student, Aging Convergence Research Center, KRIBB
+- 2015–2020 &nbsp; B.S., Department of Microbiology and Molecular Life Sciences, Chungnam National University

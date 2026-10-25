@@ -1,7 +1,7 @@
 ---
-title: "Inhee Choi"
+title: "InHee Choi"
 subtitle: "Integrated M.S./Ph.D. Student"
-image: ../assets/team/placeholder.png   # 사진: ../assets/team/inhee-choi.jpg (3:4 세로)
+image: ../assets/team/inhee-choi.jpg
 order: 8
 about:
   template: trestles
@@ -9,18 +9,12 @@ about:
   image-width: 14em
 ---
 
-**Research interests** — One or two lines on research interests. (to be written)
+**Research interests**
+
+- Defining the threshold that determines whether damaged cells recover or undergo senescence.
+- Identifying the mechanisms that enable senescent cells to evade clearance and persist.
 
 ## Education & Training
 
-- YYYY–present &nbsp; Position, Department, Institution
-- YYYY–YYYY &nbsp; M.Sc., Department, Institution
-- YYYY–YYYY &nbsp; B.Sc., Department, Institution
-
-## Awards
-
-- YYYY &nbsp; 수상명 (수여 기관)
-
-## Fellowship
-
-- YYYY–YYYY &nbsp; Fellowship name
+- 2023–present &nbsp; Integrated M.S./Ph.D. Program in Bioinformatics, University of Science and Technology (UST)
+- 2019–2023 &nbsp; B.S., Department of Molecular Biology, Jeonbuk National University

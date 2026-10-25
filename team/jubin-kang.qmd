@@ -1,7 +1,7 @@
 ---
 title: "Jubin Kang"
 subtitle: "Postdoctoral Researcher"
-image: ../assets/team/placeholder.png   # 사진: ../assets/team/jubin-kang.jpg (3:4 세로)
+image: ../assets/team/jubin-kang.jpg
 order: 2
 about:
   template: trestles
@@ -9,18 +9,10 @@ about:
   image-width: 14em
 ---
 
-**Research interests** — One or two lines on research interests. (to be written)
+**Research interests** — Aging-associated remodeling of hepatic zonation · Dynamics of cellular senescence programs
 
 ## Education & Training
 
-- YYYY–present &nbsp; Position, Department, Institution
-- YYYY–YYYY &nbsp; M.Sc., Department, Institution
-- YYYY–YYYY &nbsp; B.Sc., Department, Institution
-
-## Awards
-
-- YYYY &nbsp; 수상명 (수여 기관)
-
-## Fellowship
-
-- YYYY–YYYY &nbsp; Fellowship name
+- 2023–present &nbsp; Postdoctoral Researcher, Aging Convergence Research Center, KRIBB
+- 2019–2023 &nbsp; Integrated M.S./Ph.D., Department of Anatomy and Histology, Gyeongsang National University
+- 2015–2019 &nbsp; B.S., Department of Biotechnology, CHA University

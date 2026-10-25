@@ -13,6 +13,7 @@ blank_na <- function(df, cols) {
 # 주제 탭 순서. publications.csv의 topics 열에 ;로 구분해 적은 이름과 정확히 같아야 함
 PUB_TOPICS <- c("Aging", "Cellular Senescence", "Omics", "Inflammation", "Review")
 PI_NAME <- "Kim, C."   # 저자 목록에서 굵게 표시할 이름
+# 연구실 구성원(학생 등) 저자는 publications.csv authors에서 [[이름]]으로 감싸면 굵게 표시 (PubMed 소속 확인 후)
 
 read_pubs <- function() {
   p <- read.csv("data/publications.csv", stringsAsFactors = FALSE)
@@ -29,11 +30,12 @@ pub_entry <- function(p) {
   # 공동 제1저자 표시 *가 마크다운 기울임으로 해석되지 않도록 \* 로 이스케이프한 뒤 PI 이름을 굵게
   authors <- gsub("*", "\\*", p$authors, fixed = TRUE)
   authors <- gsub(PI_NAME, paste0("**", PI_NAME, "**"), authors, fixed = TRUE)
+  authors <- gsub("\\[\\[([^]]+)\\]\\]", "**\\1**", authors)
   vol <- if (nzchar(p$volume)) paste0(" ", p$volume) else ""
   doi <- if (nzchar(p$doi)) paste0(" · [doi](https://doi.org/", p$doi, ")") else ""
   tags <- pub_topics(p)
   tags <- if (length(tags)) paste0(" · ", paste0("`", tags, "`", collapse = " ")) else ""
-  paste0("- **", p$title, "** \\\n  ", authors, " \\\n  *", p$journal, "*", vol,
+  paste0("- **", p$title, "** \\\n  ", authors, " \\\n  **", p$journal, "**", vol,
          " (", p$year, ")", doi, tags, "\n")
 }
 
@@ -61,10 +63,15 @@ show_pubs <- function() {
 }
 
 # ---- News ----
-show_news <- function(n = Inf) {
+# by_year = TRUE: 연도별 소제목(News 페이지). Home은 by_year = FALSE로 최근 n건만
+show_news <- function(n = Inf, by_year = FALSE) {
   news <- read.csv("data/news.csv", stringsAsFactors = FALSE)
   news <- head(news[order(news$date, decreasing = TRUE), ], n)
-  for (i in seq_len(nrow(news))) cat("- **", news$date[i], "** — ", news$text[i], "\n", sep = "")
+  year <- substr(news$date, 1, 4)
+  for (i in seq_len(nrow(news))) {
+    if (by_year && (i == 1 || year[i] != year[i - 1])) cat("\n## ", year[i], "\n\n", sep = "")
+    cat("- **", news$date[i], "** — ", news$text[i], "\n", sep = "")
+  }
 }
 
 # ---- 공통: Key papers 목록 (Research, Models & Tools) ----
@@ -158,20 +165,27 @@ show_collaborators <- function() {
   cat(":::\n\n:::\n")
 }
 
-# ---- Lab photos (photos/<행사종류>/YYYY-MM_설명.jpg) ----
-# 폴더 = 섹션, 파일 이름 = 날짜와 설명. 사진 파일만 넣으면 자동으로 페이지에 추가됨
+# ---- Lab photos (photos/<YYYY-MM-DD>_<이름>/01.jpg ...) ----
+# 폴더 하나 = 이벤트 하나. 연도 → 이벤트(최신순)로 나열, 이벤트마다 사진 3열 격자(목록은 4:3으로 잘라 줄 맞춤),
+# 누르면 원본 비율로 크게 보기(lightbox, 같은 이벤트끼리 넘겨 보기). 제목·설명은 data/photos.yml
 show_photos <- function() {
-  for (d in sort(list.dirs("photos", recursive = FALSE))) {
-    files <- sort(list.files(d, pattern = "\\.(jpe?g|png)$", ignore.case = TRUE), decreasing = TRUE)
+  meta <- if (file.exists("data/photos.yml")) yaml::read_yaml("data/photos.yml") else list()
+  dirs <- sort(basename(list.dirs("photos", recursive = FALSE)), decreasing = TRUE)
+  dirs <- dirs[grepl("^\\d{4}-\\d{2}-\\d{2}_", dirs)]
+  prev_year <- ""
+  for (d in dirs) {
+    files <- sort(list.files(file.path("photos", d), pattern = "\\.(jpe?g|png|webp)$", ignore.case = TRUE))
     if (length(files) == 0) next
-    section <- tools::toTitleCase(gsub("-", " ", basename(d)))
-    cat("\n## ", section, "\n\n::: {layout-ncol=3}\n\n", sep = "")
+    date <- substr(d, 1, 10); year <- substr(d, 1, 4)
+    m <- meta[[d]]
+    title <- if (!is.null(m$title)) m$title else tools::toTitleCase(gsub("-", " ", sub("^[^_]*_", "", d)))
+    if (year != prev_year) { cat("\n## ", year, "\n\n", sep = ""); prev_year <- year }
+    cat("### ", title, " {#", d, "}\n\n[", date, "]{.photo-date}\n\n::: {.photo-grid}\n\n", sep = "")
     for (f in files) {
-      stem <- tools::file_path_sans_ext(f)
-      date <- sub("_.*", "", stem)
-      desc <- gsub("-", " ", sub("^[^_]*_", "", stem))
-      cat("![", date, " · ", desc, "](", file.path(d, f), "){group=\"", basename(d), "\"}\n\n", sep = "")
+      cap <- m$captions[[f]]; cap <- if (is.null(cap)) "" else cap
+      alt <- if (nzchar(cap)) cap else title
+      cat("![", cap, "](photos/", d, "/", f, "){group=\"", d, "\" fig-alt=\"", gsub("\"", "'", alt), "\"}\n\n", sep = "")
     }
-    cat(":::\n")
+    cat(":::\n\n")
   }
 }

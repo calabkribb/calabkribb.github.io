@@ -1,11 +1,15 @@
 ---
-title: "Publications"
+pagetitle: "Publications"   # 브라우저 탭 제목. 화면 제목은 아래 .column-page 안의 # Publications
+title-block-style: none   # 제목을 목록과 같은 넓은 폭에 두기 위해 자동 제목 영역을 끄고 직접 씀
 ---
 
 <!-- 내용은 data/publications.csv에서 자동 생성.
      key=TRUE → Selected 탭, topics(;로 구분) → 주제 탭. 주제 목록은 R/site.R의 PUB_TOPICS. -->
 
-\* co-first author, \# co-corresponding author.
+::: {.column-page}
+# Publications {.title}
+
+\* co-first author, \# co-corresponding author. Lab members are shown in bold.
 
 ```{r}
 #| echo: false
@@ -13,3 +17,4 @@ title: "Publications"
 source("R/site.R")
 show_pubs()
 ```
+:::

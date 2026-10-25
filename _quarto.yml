@@ -5,7 +5,6 @@ project:
     - .nojekyll             # GitHub Pages의 Jekyll 처리 끄기 (render 때마다 docs/로 복사)
 
 lang: en
-date-modified: last-modified  # 페이지 상단에 최종 수정일 표시
 
 website:
   title: "Cellular Agenomics Lab"

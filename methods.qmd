@@ -1,6 +1,8 @@
 ---
 title: "Models & Tools"
-date-modified: ""   # 이 페이지만 최종 수정일 표시 안 함 (사이트 전체 설정은 _quarto.yml)
+toc: true
+toc-location: left   # 왼쪽에 섹션 바로가기 (휴대폰에서는 접혀서 위에 표시)
+toc-depth: 2
 ---
 
 <!-- 문단·그림은 이 파일에 직접 씀. 카드(Data we generate 6, Functional assays 4)와 Key papers는 data/methods.yml.

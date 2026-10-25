@@ -3,8 +3,8 @@ title: "Photos"
 lightbox: true
 ---
 
-<!-- photos/ 아래 폴더 하나 = 섹션 하나 (예: photos/conferences/, photos/lab-events/).
-     파일 이름: YYYY-MM_짧은-설명.jpg → 사진 아래 "YYYY-MM · 짧은 설명"으로 표시, 최신순 정렬.
+<!-- 이벤트 하나 = photos/<YYYY-MM-DD>_<이름>/ 폴더 하나 (01.jpg, 02.jpg ...). 연도 → 이벤트 최신순 자동 정렬.
+     이벤트 제목·사진 설명은 data/photos.yml. 사진은 올리기 전에 EXIF(위치정보)를 반드시 제거할 것.
      사진은 사진 속 인물 모두의 동의를 받은 것만 올릴 것 (CLAUDE.md 규칙 6). -->
 
 ```{r}

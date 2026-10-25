@@ -1,7 +1,7 @@
 ---
 title: "Joyoung Kim"
 subtitle: "Integrated M.S./Ph.D. Student"
-image: ../assets/team/placeholder.png   # 사진: ../assets/team/joyoung-kim.jpg (3:4 세로)
+image: ../assets/team/joyoung-kim.jpg
 order: 6
 about:
   template: trestles
@@ -9,18 +9,9 @@ about:
   image-width: 14em
 ---
 
-**Research interests** — One or two lines on research interests. (to be written)
+**Research interests** — Liver aging and cellular senescence · RNA metabolism
 
 ## Education & Training
 
-- YYYY–present &nbsp; Position, Department, Institution
-- YYYY–YYYY &nbsp; M.Sc., Department, Institution
-- YYYY–YYYY &nbsp; B.Sc., Department, Institution
-
-## Awards
-
-- YYYY &nbsp; 수상명 (수여 기관)
-
-## Fellowship
-
-- YYYY–YYYY &nbsp; Fellowship name
+- 2023.03–present &nbsp; Integrated M.S./Ph.D. Program, Bioinformatics, University of Science and Technology (UST), Republic of Korea
+- 2019.03–2021.02 &nbsp; B.S., Department of Biochemistry, Chungbuk National University, Republic of Korea

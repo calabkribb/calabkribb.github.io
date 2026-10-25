@@ -10,7 +10,6 @@ listing:
     image-placeholder: assets/team/placeholder.png
     sort-ui: false
     filter-ui: false
-date-modified: ""   # 이 페이지만 최종 수정일 표시 안 함 (사이트 전체 설정은 _quarto.yml)
 title-block-style: none   # 제목을 탭과 같은 넓은 폭에 두기 위해 자동 제목 영역을 끄고 아래 .column-page 안에 직접 씀
 ---
 

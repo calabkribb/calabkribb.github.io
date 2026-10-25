@@ -8,5 +8,5 @@ title: "News"
 #| echo: false
 #| results: asis
 source("R/site.R")
-show_news()
+show_news(by_year = TRUE)
 ```

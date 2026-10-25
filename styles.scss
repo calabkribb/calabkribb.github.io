@@ -15,7 +15,7 @@ $font-family-sans-serif: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "App
 
 // ---- 상단 메뉴바: 로고 크기와 아래 구분선 ----
 .navbar { border-bottom: 1px solid #e5e8eb; }
-.navbar-brand .navbar-logo { max-height: 44px; }
+.navbar-brand .navbar-logo { max-height: 56px; }
 .navbar-title { font-weight: 600; letter-spacing: 0.01em; }
 // 휴대폰(768px 미만): 로고와 긴 이름이 함께 들어가지 않아 "Cellular A…"로 잘림 → 로고를 숨기고 약자 "CALab"만 표시
 // (Quarto navbar는 화면 크기별 제목 설정이 없어 CSS로 원래 글자를 숨기고 ::after로 약자를 씀)
@@ -92,6 +92,9 @@ section.page-sec > h2 { border-top: 1px solid #dfe3e6; border-bottom: none; padd
   font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5b6770;
 }
 h2 .label-sm.kicker { margin-bottom: 0.3rem; }
+// 왼쪽 목차(#TOC)에는 제목 앞 머리말(SIGNATURE METHOD 등)을 빼고 제목만, 번호 배지는 작게
+#TOC .label-sm { display: none; }
+#TOC .num-badge { width: 1.4em; height: 1.4em; font-size: 0.7em; margin-right: 0.35rem; }
 // Key papers 목록 (R/site.R paper_list())
 .paper-list li { margin-bottom: 0.7rem; }
 // 테두리 카드 기본형 (Research 목차 카드, Models & Tools 카드)
@@ -169,6 +172,19 @@ img.mt-icon { width: 56px; height: 56px; }
 .cb-intl { align-items: center; margin-top: 1rem; }
 .cb-intl-card { margin-bottom: 0.8rem; }
 .cb-intl-card p { margin: 0; }
+
+// ==== Photos 페이지 (photos.qmd + R/site.R show_photos()) ====
+// 이벤트마다 사진 격자: 데스크톱 3열, 태블릿·휴대폰 2열. 목록에서는 4:3으로 잘라 줄을 맞추고, 누르면 원본 비율(lightbox)
+.photo-date { display: block; margin: -0.4rem 0 0.6rem 0; font-size: 0.85rem; color: #5b6770; }
+.photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-bottom: 2rem; }
+@media (max-width: 767.98px) { .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; } }
+.photo-grid > * { margin: 0; }
+.photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+.photo-grid figcaption { font-size: 0.8rem; color: #5b6770; margin-top: 0.3rem; }
+
+// ==== Join us (join.qmd) : 연구실 문화 카드 3장 ====
+.join-value { display: block; font-size: 1.1rem; font-weight: 600; color: $primary; margin-bottom: 0.4rem; }
+.box-card p:last-child { margin-bottom: 0; }
 
 // Outreach 강연 카드: YouTube 썸네일(hqdefault, 4:3 위아래 검은 띠 포함)을 16:9로 잘라 띠 제거
 .lectures img {

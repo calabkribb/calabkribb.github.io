@@ -69,7 +69,10 @@
   - `team/<이름>.qmd` 1인 1파일 → team.qmd Members 탭(listing, `order` 순) + 개인 페이지(about: trestles).
     PI: Research interests·Employment·Education & Training·Awards / 구성원: Research interests·Education & Training·Awards·Fellowship.
     Awards는 한글로 작성. 사진은 컬러.
-  - `photos/<행사종류>/YYYY-MM_설명.jpg` → photos.qmd (폴더=섹션, 최신순, lightbox)
+  - `photos/<YYYY-MM-DD>_<이름>/01.jpg …` → photos.qmd (2026-10-25 개편). 폴더 하나 = 이벤트 하나, 연도 → 이벤트 최신순.
+    제목·사진 설명은 `data/photos.yml`(폴더 이름 → title, captions). 목록은 3열(휴대폰 2열)·4:3 크롭, 누르면 lightbox.
+    날짜는 사진 파일 날짜 기준. 올리기 전에 EXIF 제거·회전 처리, 긴 변 1600px 이하.
+  - `data/news.csv`(date, text): News 페이지는 연도별 소제목(`show_news(by_year = TRUE)`), Home은 최근 2건.
 - `R/site.R` 페이지 공통 R 함수 (`show_pubs()`, `show_projects()`, `show_cards()`, `paper_list()`, `show_news()`, `show_collaborators()`, `show_photos()`)
 - `styles.scss` 공통 클래스 (Research·Models & Tools): `section.page-sec`(섹션 구분선), `.label-sm`(작은 대문자 라벨,
   제목 안 `.kicker`는 머리말), `.paper-list`, `.box-card`(테두리 카드), `.tag` + `.tag-rna/-space/-protein/-metabolite/-house/-collab`,
@@ -83,6 +86,12 @@
 - 파일명 `assets/team/<이름-성>.jpg`(소문자·하이픈), 해당 `team/<이름>.qmd`의 `image:`에 경로 지정.
 - 사이트에서는 CSS로 3:4 크롭(위쪽 기준), 컬러 그대로 표시. 비율이 달라도 찌그러지지 않지만
   아래쪽이 잘리므로 3:4로 받는 것이 안전. 사진 없으면 `assets/team/placeholder.png`.
+- **사진을 올리기 전 반드시 EXIF 메타데이터를 제거할 것** (2026-10-25 확인: 휴대폰 사진 2장에 촬영 위치 위도·경도가 들어 있었음).
+  sips는 EXIF를 보존하므로 sips만으로는 지워지지 않음. 회전 정보(orientation=6 등)가 있는 사진은 픽셀을 직접 돌린 뒤
+  EXIF를 지워야 브라우저에서 옆으로 눕지 않음. 처리: 회전 → 얼굴 중심 3:4 자르기 → 1200px보다 크면 축소(작은 사진은 확대 금지)
+  → APP1(Exif) 구간 제거. 올린 뒤 `docs/assets/team/*.jpg`에 orientation·GPS가 없는지 확인.
+- 표기 통일: 학위 B.S./M.S./Ph.D., 통합과정 "Integrated M.S./Ph.D.", 박사후연구원 "Postdoctoral Researcher".
+  영문 이름은 본인이 준 표기 우선, 없으면 사이트 기존 표기 유지.
 
 ## 반드시 지킬 규칙
 1. `docs/`는 직접 수정하지 말 것. 전체 render 때마다 통째로 재생성되어 수동 추가 파일은 삭제됨.
@@ -119,3 +128,15 @@
    (`usethis::use_git()` / `usethis::use_github()` 또는 git CLI. 실행 전 사용자 확인.)
 5. (사용자 직접) GitHub Settings > Pages: Deploy from a branch, 기본 브랜치, `/docs` → Save.
 6. Actions 탭 배포 완료 후 https://calabkribb.github.io/ 접속 확인.
+
+## 페이지 배치 메모 (2026-10-26)
+- 수정일(Modified) 표시는 사이트 전체에서 없앰 (`_quarto.yml`의 `date-modified` 삭제).
+- Research, Models & Tools: 왼쪽 목차(`toc: true`, `toc-location: left`, `toc-depth: 2`). 목차에서는 제목 안 머리말(`.kicker`) 숨김.
+  휴대폰에서는 Quarto가 목차를 숨김 (Research는 본문 주제 카드로 이동 가능).
+- Team, Publications: 넓은 폭. 자동 제목 영역을 끄고(`title-block-style: none`, `pagetitle`) `.column-page` 안에 `# 제목 {.title}`을 직접 써서
+  제목과 내용의 왼쪽 끝을 맞춤.
+- Publications: 연구실 구성원 저자는 `publications.csv` authors에서 `[[이름]]`으로 감싸 굵게 (PubMed 저자 전체 이름·소속으로 확인한 경우만).
+  저널명은 굵게.
+- 메뉴바 로고 높이 56px.
+- Join us(한국어): 도입 리드 → 연구실 문화(호기심 / Team Chemistry / 소통 카드) → 모집 분야(박사과정·박사후연구원, 인원 표기 없음)
+  → 입학 방법(UST, 학연과정) → 지원 방법. 방문자 지도 위젯은 넣지 않기로 함 (외부 계정·방문자 추적 문제).

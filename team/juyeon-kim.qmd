@@ -1,7 +1,7 @@
 ---
 title: "Juyeon Kim"
 subtitle: "Integrated M.S./Ph.D. Student"
-image: ../assets/team/placeholder.png   # 사진: ../assets/team/juyeon-kim.jpg (3:4 세로)
+image: ../assets/team/juyeon-kim.jpg
 order: 5
 about:
   template: trestles
@@ -9,18 +9,27 @@ about:
   image-width: 14em
 ---
 
-**Research interests** — One or two lines on research interests. (to be written)
+**Research interests** — Aging, Tissue microenvironment · Cellular senescence · tissue fibrosis and inflammation · single-cell and spatial multi-omics
 
 ## Education & Training
 
-- YYYY–present &nbsp; Position, Department, Institution
-- YYYY–YYYY &nbsp; M.Sc., Department, Institution
-- YYYY–YYYY &nbsp; B.Sc., Department, Institution
+- 2021–present &nbsp; Integrated M.S./Ph.D. Program, Department of Bioinformatics, KRIBB School of Bioscience, Korea University of Science and Technology (UST), Daejeon, Korea
+- 2021–present &nbsp; Aging Convergence Research Center, Korea Research Institute of Bioscience and Biotechnology (KRIBB), Daejeon, Korea
+- 2016–2021 &nbsp; B.S. in Molecular Biology, Pusan National University (PNU), Pusan, Korea
 
 ## Awards
 
-- YYYY &nbsp; 수상명 (수여 기관)
+- 2025 &nbsp; Grand Prize, UST Academic Research Award, Korea University of Science and Technology (UST)
+- 2024 &nbsp; Excellence Award, KRIBB Poster Festival, Korea Research Institute of Bioscience & Biotechnology (KRIBB)
+- 2024 &nbsp; Best Poster Presentation Award, Korea University of Science and Technology (UST)
+- 2024 &nbsp; The Korean Society for Gerontology Best Poster Award
+- 2024 &nbsp; A3 Foresight Meeting Best Poster Award
+- 2021 &nbsp; Young scientist proposal challenge, Korea University of Science and Technology (UST)
 
-## Fellowship
+## Publications
 
-- YYYY–YYYY &nbsp; Fellowship name
+\* co-first author
+
+1. Tak, K.Y.\*, **Kim, J.**\*, Park, M.\*, ..., Kim, C., Park, J.-E. (2025). [Quasi-spatial single-cell transcriptome based on physical tissue properties defines early aging associated niche in liver](https://doi.org/10.1038/s43587-025-00857-7). ***Nature Aging***.
+2. **Kim, J.**, Kim, M., Kim, C. (2026). [Imperfect repair in aging: senescent cells and the hepatic fibrotic niche](https://doi.org/10.5483/BMBRep.2025-0224). ***BMB Reports***.
+3. Lim, G.\*, **Kim, J.**\*, …, Kang, D.H., Kim, H., Kim, C., Yoon, S.-J., Choi, D.W. (2026). [Neutrophil-derived itaconate facilitates tiered pulmonary inflammation via Kdm5b-associated epigenetic remodeling in alveolar macrophages](https://doi.org/10.1016/j.celrep.2026.117412). ***Cell Reports***.

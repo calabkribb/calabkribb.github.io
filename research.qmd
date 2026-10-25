@@ -1,6 +1,8 @@
 ---
 title: "Research"
-date-modified: ""   # 이 페이지만 최종 수정일 표시 안 함 (사이트 전체 설정은 _quarto.yml)
+toc: true
+toc-location: left   # 왼쪽에 주제 바로가기 (휴대폰에서는 접혀서 위에 표시)
+toc-depth: 2
 ---
 
 <!-- 세 주제(목차 카드·질문·그림·What we do·Key papers)는 data/projects.yml에서 자동 생성.
